@@ -10,8 +10,16 @@
   ],
   "comments": false,
   "env": {
-    "test": {
-      "presets": ["env"]
+    "production": {
+      "presets": [
+        "flow",
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 versions"]
+          }
+        }],
+        "minify"
+      ]
     }
   }
 }

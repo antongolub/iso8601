@@ -8,7 +8,7 @@ const YYYYWWWD: IParser = {
     /^(\d{4}|[\-\+]\d{6})W(0[1-9]|[1-4]\d|5[0-3])([1-7])?$/,             // Basic
     /^(\d{4}|[\-\+]\d{6})\-W(0[1-9]|[1-4]\d|5[0-3])(?:\-([1-7]))?$/      // Extended
   ],
-  builder(parts) {
+  builder (parts) {
     const year = +parts[1]
     const week = +parts[2]
     const offset = 7 * +(new Date(year, 0, 1).getDay() < 5) + new Date(year, 0, 1).getDay() - 1

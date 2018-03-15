@@ -8,7 +8,7 @@ const YYYYMMDD: IParser = {
     /^(\d{4}|[\-\+]\d{6})(?:\-(0[1-9]|1[012])(?:\-(0[1-9]|[12]\d|30|31))?)?$/,     // Extended
     /^(\d{4}|[\-\+]\d{6})(0[1-9]|1[012])(0[1-9]|[12]\d|30|31)$/                    // Basic
   ],
-  builder(parts) {
+  builder (parts) {
     const year = +parts[1]
     const month = +parts[2] - 1 || 0
     const day = +parts[3] || 1
