@@ -1,0 +1,16 @@
+{
+  "reporter": [
+    "html",
+    "text",
+    "text-summary"
+  ],
+  "include": [
+    "src/**/*.js"
+  ],
+  "require": [
+    "babel-core/register",
+    "flow-remove-types/register"
+  ],
+  "check-coverage": false,
+  "cache": true
+}

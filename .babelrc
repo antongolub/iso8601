@@ -1,0 +1,17 @@
+{
+  "presets": [
+    "flow",
+    "env"
+  ],
+  "plugins": [
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-runtime"
+  ],
+  "comments": false,
+  "env": {
+    "test": {
+      "presets": ["env"]
+    }
+  }
+}
