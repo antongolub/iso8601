@@ -45,7 +45,7 @@
     "babel-register": "^6.26.0",
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.4",
-    "flow-bin": "^0.69.0",
+    "flow-bin": "^0.70.0",
     "flow-coverage-report": "^0.5.0",
     "flow-remove-types": "^1.2.3",
     "jest": "^23.0.0-alpha.4",
