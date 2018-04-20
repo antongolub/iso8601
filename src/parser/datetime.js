@@ -1,6 +1,7 @@
 // @flow
 
 import type {IParser} from '../interface'
+import {correctOffset, getSignFactor} from './util'
 
 // 4.3 Date and time of day
 const parser: IParser = {
@@ -12,15 +13,12 @@ const parser: IParser = {
     /^(\d{4}|[\-\+]\d{6})(?:(0[1-9]|1[012])(0[1-9]|[12]\d|30|31)|(00[1-9]|0[1-9]\d|[12]\d\d|3[0-5]\d|36[0-6])|W(0[1-9]|[1-4]\d|5[0-3])(\d))T(?:((?:[01]\d|2[0-3])(?:\.\d+)?)|([01]\d|2[0-3])([0-5]\d(?:\.\d+)?)|([01]\d|2[0-3])([0-5]\d)((?:[0-5]\d|60)(?:\.\d+)?))(?:(Z)|([\-\+])(\d{2})(\d{2})?)?$/,
     /^(\d{4}|[\-\+]\d{6})\-(?:(0[1-9]|1[012])\-(0[1-9]|[12]\d|30|31)|(00[1-9]|0[1-9]\d|[12]\d\d|3[0-5]\d|36[0-6])|W(0[1-9]|[1-4]\d|5[0-3])\-(\d))T(?:((?:[01]\d|2[0-3])(?:\.\d+)?)|([01]\d|2[0-3]):([0-5]\d(?:\.\d+)?)|([01]\d|2[0-3]):([0-5]\d):((?:[0-5]\d|60)(?:\.\d+)?))(?:(Z)|([\-\+])(\d{2})(?::(\d{2}))?)?$/
   ],
-  builder (parts) {
+  builder (parts): Date {
     const year = +parts[1]
     const hours = +(parts[7] || parts[8] || parts[10])
     const minutes = +(parts[9] || parts[11] || 0) + 60 * (hours - (hours | 0))
     const seconds = +(parts[12] || 0) + 60 * (minutes - (minutes | 0))
     const milliseconds = Math.round(1000 * (seconds - (seconds | 0)))
-
-    let date
-    let offset
     let month = 0
     let day
 
@@ -41,16 +39,13 @@ const parser: IParser = {
     }
 
     if (parts[13]) { // Zulu time
-      date = new Date(Date.UTC(year, month, day, hours, minutes, seconds, milliseconds))
-    } else {
-      date = new Date(year, month, day, hours, minutes, seconds, milliseconds)
-
-      offset = (parts[14] === '+' ? 1 : -1) * (+parts[15] * 60 + (+parts[16] || 0))
-
-      if (!isNaN(offset)) {
-        date.setMinutes(date.getMinutes() - offset - date.getTimezoneOffset())
-      }
+      return new Date(Date.UTC(year, month, day, hours, minutes, seconds, milliseconds))
     }
+
+    const date = new Date(year, month, day, hours, minutes, seconds, milliseconds)
+    const offset = getSignFactor(parts[14]) * (+parts[15] * 60 + (+parts[16] || 0))
+
+    correctOffset(date, offset)
     return date
   }
 }

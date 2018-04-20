@@ -1,6 +1,7 @@
 // @flow
 
 import type {IParser} from '../interface'
+import {correctOffset, getSignFactor} from './util'
 
 // NOTE 4.2.2.4 Representations with decimal fraction: "A decimal fraction shall have at least one digit"
 const parser: IParser = {
@@ -32,11 +33,10 @@ const parser: IParser = {
     }
 
     // NOTE Time zones in ISO 8601 are represented as local time (with the location unspecified), as UTC, or as an offset from UTC.
-    const offset = (parts[8] === '+' ? 1 : -1) * (+parts[9] * 60 + (+parts[10] || 0))
+    const offset = getSignFactor(parts[8]) * (+parts[9] * 60 + (+parts[10] || 0))
 
-    if (!isNaN(offset)) {
-      date.setMinutes(date.getMinutes() - offset - date.getTimezoneOffset())
-    }
+    correctOffset(date, offset)
+
     return date
   }
 }

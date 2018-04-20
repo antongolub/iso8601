@@ -42,44 +42,58 @@ function isValidDate (date) {
  * @return {Date/undefined}
  */
 export default function parse (value: IISOString, group: string, date: Date) {
-  let parsers: Array<IParser>
+  const parsers = getParsers(group)
   let parser
   let patterns
   let parts
 
   value = ('' + value).replace(',', '.')
 
-  switch (('' + group).toLowerCase()) {
-    case 'localtime':
-    case 'time':
-      parsers = timeParsers
-      break
-
-    case 'date':
-      parsers = dateParsers
-      break
-
-    case 'datetime':
-      parsers = dateTimeParsers
-      break
-
-    default:
-      parsers = allParsers
-  }
   for (let i = 0; i < parsers.length; i++) {
     parser = parsers[i]
-    patterns = [].concat(parser.pattern)
+    patterns = getPatterns(parser)
 
     for (let j = 0; j < patterns.length; j++) {
       parts = patterns[j].exec(value)
 
       if (parts) {
-        date = isValidDate(date)
+        const initialDate = isValidDate(date)
           ? new Date(date)
           : new Date()
 
-        return parser.builder(parts, date)
+        return parser.builder(parts, initialDate)
       }
     }
   }
+}
+
+/**
+ * @ignore
+ * @param {string} group
+ * @return {IParser[]}
+ */
+function getParsers (group: string): Array<IParser> {
+  switch (('' + group).toLowerCase()) {
+    case 'localtime':
+    case 'time':
+      return timeParsers
+
+    case 'date':
+      return dateParsers
+
+    case 'datetime':
+      return dateTimeParsers
+
+    default:
+      return allParsers
+  }
+}
+
+/**
+ * @ignore
+ * @param parser
+ * @return {RegExp[]}
+ */
+function getPatterns (parser: IParser): RegExp[] {
+  return [].concat(parser.pattern)
 }
