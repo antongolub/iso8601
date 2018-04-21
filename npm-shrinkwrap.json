@@ -1,6 +1,6 @@
 {
   "name": "@antongolub/iso8601",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
