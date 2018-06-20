@@ -12,12 +12,7 @@
     "build": "BABEL_ENV=production babel src --out-dir dist",
     "test_with_push": "npm test && npm run codeclimate_push && npm run coveralls_push",
     "codeclimate_push": "codeclimate-test-reporter < ./coverage/lcov.info",
-    "coveralls_push": "cat ./coverage/lcov.info | coveralls",
-    "minor": "npm test && npm run build && standard-version --release-as minor && npm run postversion",
-    "major": "npm test && npm run build && standard-version --release-as major && npm run postversion",
-    "release": "npm test && npm run build && standard-version && npm run postversion",
-    "postversion": "npm run push && npm publish",
-    "push": "git push --follow-tags origin master"
+    "coveralls_push": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
@@ -33,15 +28,20 @@
   ],
   "author": "Anton Golub <a.golub@qiwi.com>",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.47",
-    "@babel/core": "^7.0.0-beta.47",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.47",
-    "@babel/plugin-transform-flow-strip-types": "^7.0.0-beta.47",
-    "@babel/plugin-transform-runtime": "^7.0.0-beta.47",
-    "@babel/polyfill": "^7.0.0-beta.47",
-    "@babel/preset-env": "^7.0.0-beta.47",
-    "@babel/preset-flow": "^7.0.0-beta.47",
+    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/git": "^5.0.0",
+    "@semantic-release/github": "^4.2.17",
+    "@semantic-release/npm": "^3.3.1",
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.51",
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0-beta.51",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.51",
+    "@babel/polyfill": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-flow": "^7.0.0-beta.51",
     "babel-core": "^7.0.0-bridge.0",
     "babel-preset-minify": "^0.4.3",
     "codeclimate-test-reporter": "^0.5.0",
@@ -49,10 +49,10 @@
     "flow-bin": "^0.74.0",
     "flow-coverage-report": "^0.5.0",
     "flow-remove-types": "^1.2.3",
-    "jest": "^23.0.0-alpha.4",
+    "jest": "^23.1.0",
     "lodash": "^4.17.10",
-    "standard-flow": "^1.0.0",
-    "standard-version": "^4.3.0"
+    "semantic-release": "^15.5.5",
+    "standard-flow": "^1.0.0"
   },
   "jest": {
     "collectCoverage": true,
@@ -80,5 +80,21 @@
       }
     }
   },
-  "dependencies": {}
+  "release": {
+    "branch": "master",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "publish": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  }
 }
