@@ -33,7 +33,7 @@
     "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^7.0.1",
     "@semantic-release/github": "^5.0.1",
-    "@semantic-release/npm": "^4.0.2",
+    "@semantic-release/npm": "^5.0.0",
     "@babel/cli": "^7.0.0-beta.55",
     "@babel/core": "^7.0.0-beta.55",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.55",
