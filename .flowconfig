@@ -3,7 +3,4 @@
 
 [ignore]
 ./dist/
-./node_modules/.*
-
-[libs]
-./definitions/
+.*/node_modules/.*
