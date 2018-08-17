@@ -1,6 +1,6 @@
 {
   "name": "@antongolub/iso8601",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Strict ISO8601 datetime parser",
   "main": "dist/index.js",
   "scripts": {

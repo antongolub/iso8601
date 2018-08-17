@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/antongolub/iso8601/compare/v0.1.0...v0.1.1) (2018-08-17)
+
+
+### Performance Improvements
+
+* clean up npm dist ([4e41b0f](https://github.com/antongolub/iso8601/commit/4e41b0f))
+
 # [0.1.0](https://github.com/antongolub/iso8601/compare/v0.0.3...v0.1.0) (2018-06-20)
 
 
