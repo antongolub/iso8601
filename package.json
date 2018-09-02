@@ -50,7 +50,7 @@
     "babel-preset-minify": "^0.4.3",
     "coveralls": "^3.0.2",
     "flow-bin": "^0.79.1",
-    "flow-coverage-report": "^0.5.0",
+    "flow-coverage-report": "^0.6.0",
     "flow-remove-types": "^1.2.3",
     "jest": "^23.5.0",
     "lodash": "^4.17.10",
