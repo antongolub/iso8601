@@ -1,3 +1,15 @@
+# [1.0.0](https://github.com/antongolub/iso8601/compare/v0.2.0...v1.0.0) (2019-08-22)
+
+
+### Code Refactoring
+
+* **parser:** separate input normalizer ([ee08843](https://github.com/antongolub/iso8601/commit/ee08843))
+
+
+### BREAKING CHANGES
+
+* **parser:** IParser requires pattern as regexp[]
+
 # [0.2.0](https://github.com/antongolub/iso8601/compare/v0.1.1...v0.2.0) (2019-08-22)
 
 
