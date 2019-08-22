@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var YYYYDDD={pattern:/^(\d{4}|[\-\+]\d{6})\-?(00[1-9]|0[1-9]\d|[12]\d\d|3[0-5]\d|36[0-6])$/,builder:function builder(a){var b=+a[1],c=+a[2];return new Date(b,0,c)}},_default=YYYYDDD;exports.default=_default;
