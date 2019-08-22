@@ -21,7 +21,7 @@ after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 script:
-  - npm run test_with_report
+  - npm run test:report
 
 deploy:
   provider: script

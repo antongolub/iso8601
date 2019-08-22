@@ -8,10 +8,10 @@
     "lint": "standard-flow src/**/*.js test/**/*.js",
     "flow": "flow",
     "test": "npm run lint && npm run flow && npm run jest",
-    "flow_coverage": "flow-coverage-report -i 'src/**/*.js' -t html -t json -t text --threshold 90",
+    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -t html -t json -t text --threshold 90",
     "build": "BABEL_ENV=production babel src --out-dir dist && cp src/index.flow.js dist/index.flow.js",
-    "test_with_push": "npm test && npm run coveralls_push",
-    "coveralls_push": "cat ./coverage/lcov.info | coveralls"
+    "test:report": "npm test && npm run coveralls:push",
+    "coveralls:push": "cat ./coverage/lcov.info | coveralls"
   },
   "repository": {
     "type": "git",
