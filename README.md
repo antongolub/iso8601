@@ -1,7 +1,7 @@
 # ISO 8601
 > Strict ISO8601 datetime parser
 
-[![buildStatus](https://img.shields.io/travis/com/antongolub/iso8601.svg?maxAge=3600&branch=master)](https://travis-ci.com/antongolub/iso8601)
+[![Build Status](https://travis-ci.com/antongolub/iso8601.svg?branch=master)](https://travis-ci.com/antongolub/iso8601)
 [![npm (tag)](https://badgen.net/npm/v/@antongolub/iso8601)](https://www.npmjs.com/package/@antongolub/iso8601)
 [![dependencyStatus](https://badgen.net/david/dep/antongolub/iso8601)](https://david-dm.org/antongolub/iso8601)
 [![devDependencyStatus](https://badgen.net/david/dev/antongolub/iso8601)](https://david-dm.org/antongolub/iso8601)
