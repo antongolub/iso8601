@@ -12,6 +12,6 @@ export type IParts = Array<IPart>
 export type IBuilder = (parts: IParts, date: Date) => Date
 
 export type IParser = {
-  pattern: RegExp | Array<RegExp>,
+  pattern: Array<RegExp>,
   builder: IBuilder
 }
