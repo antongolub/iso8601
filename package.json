@@ -3,13 +3,17 @@
   "version": "0.1.1",
   "description": "Strict ISO8601 datetime parser",
   "main": "target/es5/index.js",
+  "types": "typings/index.d.ts",
+  "typescript": {
+    "definition": "typings/index.d.ts"
+  },
   "scripts": {
     "jest": "jest -w 1",
     "lint": "standard-flow src/**/*.js",
     "flow": "flow",
     "test": "npm run lint && npm run flow && npm run jest",
     "flow:coverage": "flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90",
-    "build": "BABEL_ENV=production babel src/main/js --out-dir target/es",
+    "build": "BABEL_ENV=production babel src/main/js --out-dir target/es5",
     "test:report": "npm test && npm run coveralls:push",
     "coveralls:push": "cat ./coverage/lcov.info | coveralls"
   },
@@ -20,7 +24,9 @@
   "files": [
     "README.md",
     "CHANGELOG.md",
-    "target"
+    "target",
+    "typings",
+    "flow-typed"
   ],
   "keywords": [
     "iso8601",
