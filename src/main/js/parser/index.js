@@ -43,18 +43,15 @@ function isValidDate (date) {
  */
 export default function parse (value: IISOString, group: string, date: Date) {
   const parsers = getParsers(group)
-  let parser
-  let patterns
-  let parts
 
   value = ('' + value).replace(',', '.')
 
   for (let i = 0; i < parsers.length; i++) {
-    parser = parsers[i]
-    patterns = getPatterns(parser)
+    const parser = parsers[i]
+    const patterns = getPatterns(parser)
 
     for (let j = 0; j < patterns.length; j++) {
-      parts = patterns[j].exec(value)
+      const parts = patterns[j].exec(value)
 
       if (parts) {
         const initialDate = isValidDate(date)
