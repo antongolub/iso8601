@@ -1,4 +1,4 @@
-import parse from '../src'
+import parse from '../../main/js'
 
 function getLocalOffset () {
   const date = new Date()

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.correctOffset=correctOffset,exports.getSignFactor=getSignFactor;function correctOffset(a,b){isNaN(b)||a.setMinutes(a.getMinutes()-b-a.getTimezoneOffset())}function getSignFactor(a){return"+"===a?1:-1}

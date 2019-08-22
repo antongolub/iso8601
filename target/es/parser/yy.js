@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var parser={pattern:/^(\d{2}|[\-\+]\d{4})$/,builder:function builder(a){var b=100*+a[1];return new Date(b,0)}},_default=parser;exports.default=_default;

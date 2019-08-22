@@ -2,14 +2,14 @@
   "name": "@antongolub/iso8601",
   "version": "0.1.1",
   "description": "Strict ISO8601 datetime parser",
-  "main": "dist/index.js",
+  "main": "target/es5/index.js",
   "scripts": {
     "jest": "jest -w 1",
-    "lint": "standard-flow src/**/*.js test/**/*.js",
+    "lint": "standard-flow src/**/*.js",
     "flow": "flow",
     "test": "npm run lint && npm run flow && npm run jest",
-    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -t html -t json -t text --threshold 90",
-    "build": "BABEL_ENV=production babel src --out-dir dist && cp src/index.flow.js dist/index.flow.js",
+    "flow:coverage": "flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90",
+    "build": "BABEL_ENV=production babel src/main/js --out-dir target/es",
     "test:report": "npm test && npm run coveralls:push",
     "coveralls:push": "cat ./coverage/lcov.info | coveralls"
   },
@@ -20,7 +20,7 @@
   "files": [
     "README.md",
     "CHANGELOG.md",
-    "dist/"
+    "target"
   ],
   "keywords": [
     "iso8601",
@@ -61,15 +61,14 @@
     "testEnvironment": "node",
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "<rootDir>/src/**/*.js"
+      "<rootDir>/src/main/**/*.js"
     ],
     "testMatch": [
-      "<rootDir>/test/**/*.js"
+      "<rootDir>/src/test/**/*.js"
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "<rootDir>/src/interface.js",
-      "<rootDir>/src/index.flow.js"
+      "<rootDir>/src/main/js/interface.js"
     ]
   },
   "standard-flow": {
