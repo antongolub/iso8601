@@ -1,4 +1,5 @@
 # ISO 8601
+> Strict ISO8601 datetime parser
 
 [![buildStatus](https://img.shields.io/travis/com/antongolub/iso8601.svg?maxAge=3600&branch=master)](https://travis-ci.com/antongolub/iso8601)
 [![npm (tag)](https://badgen.net/npm/v/@antongolub/iso8601)](https://www.npmjs.com/package/@antongolub/iso8601)
@@ -9,14 +10,20 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/antongolub/iso8601.svg)](https://greenkeeper.io/)
 
-Strict ISO8601 datetime parser.
-
-##### Yet another one iso date parser? Oh...
+## Yet another one date parser?
 It's 20** and if you operate with dates, you should take one of these:
 * [momentjs](https://momentjs.com/)
 * [date-fns](https://date-fns.org/)
 
 But if you need _only_ iso strings and bundle size matters, try out this lib.
+
+## Install
+```bash
+npm add @antongolub/iso8601
+yarn add @antongolub/iso8601
+```
+
+## Usage
 ```javascript
     
     const input = '2004002T10,26' // YYYYWwwDThh,hh — *
@@ -29,3 +36,5 @@ But if you need _only_ iso strings and bundle size matters, try out this lib.
     // may be combined with any of the representations in 4.2.2.2 through 4.2.2.4 (local time),
     // 4.2.4 (UTC of day) or 4.2.5.2 (local time and the difference from UTC) provided that 
 ```
+
+
