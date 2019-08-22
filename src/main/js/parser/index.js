@@ -1,3 +1,8 @@
+/**
+ * Strict ISO8601 datetime parser
+ * @module antongolub/iso8601
+ */
+
 // @flow
 import type {
   IParser,
@@ -37,8 +42,8 @@ const isValidDate = (date) => date instanceof Date && !isNaN(date.getTime())
  * @param {string} group
  * @return {IParser[]}
  */
-const getParsers = (group: string): Array<IParser> => {
-  switch (('' + group).toLowerCase()) {
+const getParsers = (group?: string): Array<IParser> => {
+  switch (group && ('' + group).toLowerCase()) {
     case 'localtime':
     case 'time':
       return timeParsers
@@ -56,7 +61,7 @@ const getParsers = (group: string): Array<IParser> => {
 
 /**
  * Strict ISO 8601 date parser
-
+ * @example
  parse('1970-01-01T00:00:00.000Z');         // new Date(0)
  parse(1950-02');                           // new Date(1950, 1)
  parse('1960W011');                         // new Date(1960, 0, 4)
@@ -65,12 +70,14 @@ const getParsers = (group: string): Array<IParser> => {
  parse('+002015-W02-4');                    // new Date(2015, 0, 8);
  parse('2052-05-09T15:20.5');               // new Date(2052, 4, 9, 15, 20, 30, 0);
 
+ * @module antongolub/iso8601
+ * @public
  * @param {String} input
  * @param {String} [group] parser pattern
  * @param {Date} [date] Default date
  * @return {Date/undefined}
  */
-export default function parse (input: IISOString, group: string, date: Date) {
+export default function parse (input: IISOString, group?: string, date?: Date): Date | void {
   const parsers = getParsers(group)
   const value = normalizeInput(input)
 
@@ -82,7 +89,7 @@ export default function parse (input: IISOString, group: string, date: Date) {
       const parts = patterns[j].exec(value)
 
       if (parts) {
-        const initialDate = isValidDate(date)
+        const initialDate = date && isValidDate(date)
           ? new Date(date)
           : new Date()
 

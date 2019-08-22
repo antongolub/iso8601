@@ -1,0 +1,28 @@
+{
+  "source": "./src/main/js",
+  "destination": "./docs",
+
+  "ignore": [
+
+  ],
+  "plugins": [
+    {"name": "esdoc-flow-plugin"},
+    {"name": "esdoc-standard-plugin"},
+    {
+      "name": "esdoc-coverage-plugin",
+      "option": {
+        "enable": true,
+        "kind": ["class", "method", "member", "get", "set", "constructor", "function", "variable"]
+      }
+    },
+    {
+      "name": "esdoc-importpath-plugin",
+      "option": {
+        "stripPackageName": false,
+        "replaces": [
+          {"from": "^js/parser", "to": "target/es5"}
+        ]
+      }
+    }
+  ]
+}

@@ -4,6 +4,9 @@ import type {IParser} from '../interface'
 import {correctOffset, getSignFactor} from './util'
 
 // NOTE 4.2.2.4 Representations with decimal fraction: "A decimal fraction shall have at least one digit"
+/**
+ * @ignore
+ */
 const parser: IParser = {
   pattern: [
     /* AB AC */

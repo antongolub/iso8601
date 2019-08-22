@@ -15,7 +15,8 @@
     "flow:coverage": "flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90",
     "build": "BABEL_ENV=production babel src/main/js --out-dir target/es5",
     "test:report": "npm test && npm run coveralls:push",
-    "coveralls:push": "cat ./coverage/lcov.info | coveralls"
+    "coveralls:push": "cat ./coverage/lcov.info | coveralls",
+    "docs": "esdoc"
   },
   "repository": {
     "type": "git",
@@ -55,6 +56,11 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-preset-minify": "^0.5.1",
     "coveralls": "^3.0.6",
+    "esdoc": "^1.1.0",
+    "esdoc-coverage-plugin": "^1.1.0",
+    "esdoc-flow-plugin": "^1.0.0",
+    "esdoc-importpath-plugin": "^1.0.2",
+    "esdoc-standard-plugin": "^1.0.0",
     "flow-bin": "^0.105.2",
     "flow-coverage-report": "^0.6.1",
     "flow-remove-types": "^2.105.2",
@@ -96,19 +102,13 @@
   },
   "release": {
     "branch": "master",
-    "verifyConditions": [
+    "plugins": [
+      "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github",
       "@semantic-release/npm",
-      "@semantic-release/git"
-    ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ],
-    "publish": [
-      "@semantic-release/npm",
-      "@semantic-release/github"
+      "@qiwi/semantic-release-gh-pages-plugin"
     ]
   }
 }

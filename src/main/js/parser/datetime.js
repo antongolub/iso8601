@@ -4,6 +4,9 @@ import type {IParser} from '../interface'
 import {correctOffset, getSignFactor} from './util'
 
 // 4.3 Date and time of day
+/**
+ * @ignore
+ */
 const parser: IParser = {
   // (YYYYMMDD | YYYYDDD | YYYYWwwD) T? HHMMSSTZ
   // The expression shall either be completely in basic format or completely in extended format

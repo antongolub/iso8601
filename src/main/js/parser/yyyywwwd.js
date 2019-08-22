@@ -3,6 +3,9 @@
 import type {IParser} from '../interface'
 
 // 4.1.4 Week date
+/**
+ * @ignore
+ */
 const YYYYWWWD: IParser = {
   pattern: [
     /^(\d{4}|[\-\+]\d{6})W(0[1-9]|[1-4]\d|5[0-3])([1-7])?$/,             // Basic

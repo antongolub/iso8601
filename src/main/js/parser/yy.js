@@ -3,6 +3,9 @@
 import type {IParser} from '../interface'
 
 // 4.1.2.3 Representations with reduced accuracy: centuries
+/**
+ * @ignore
+ */
 const parser: IParser = {
   pattern: [
     /^(\d{2}|[\-\+]\d{4})$/ // NOTE There's no extended representation

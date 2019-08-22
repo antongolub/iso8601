@@ -21,6 +21,7 @@ coverage
 build
 dist
 target
+bundle
 
 #Docs
 docs

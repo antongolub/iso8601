@@ -3,6 +3,9 @@
 import type {IParser} from '../interface'
 
 // 4.1.2 Calendar date
+/**
+ * @ignore
+ */
 const YYYYMMDD: IParser = {
   pattern: [
     /^(\d{4}|[\-\+]\d{6})(?:\-(0[1-9]|1[012])(?:\-(0[1-9]|[12]\d|30|31))?)?$/,     // Extended
