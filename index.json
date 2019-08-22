@@ -1,0 +1,1134 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "js/.external-ecmascript.js",
+    "static": true,
+    "longname": "js/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "js/index.js",
+    "content": "import parser from './parser'\n\nexport default parser\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "file",
+    "name": "js/interface.js",
+    "content": "// @flow\nexport type IISOString = string\n\nexport type IISODate = {\n  constructor(magic: IMagicParam): IISODate\n}\n\nexport type IMagicParam = string\n\nexport type IPart = string\nexport type IParts = Array<IPart>\nexport type IBuilder = (parts: IParts, date: Date) => Date\n\nexport type IParser = {\n  pattern: Array<RegExp>,\n  builder: IBuilder\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/interface.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "js/parser/datetime.js",
+    "content": "// @flow\n\nimport type {IParser} from '../interface'\nimport {correctOffset, getSignFactor} from './util'\n\n// 4.3 Date and time of day\n/**\n * @ignore\n */\nconst parser: IParser = {\n  // (YYYYMMDD | YYYYDDD | YYYYWwwD) T? HHMMSSTZ\n  // The expression shall either be completely in basic format or completely in extended format\n  pattern: [\n    /^(\\d{4}|[\\-\\+]\\d{6})(?:(0[1-9]|1[012])(0[1-9]|[12]\\d|30|31)|(00[1-9]|0[1-9]\\d|[12]\\d\\d|3[0-5]\\d|36[0-6])|W(0[1-9]|[1-4]\\d|5[0-3])(\\d))T(?:(24)|(24)(00)|(24)(00)(00))(?:(Z)|([\\-\\+])(\\d{2})(\\d{2})?)?$/,\n    /^(\\d{4}|[\\-\\+]\\d{6})\\-(?:(0[1-9]|1[012])\\-(0[1-9]|[12]\\d|30|31)|(00[1-9]|0[1-9]\\d|[12]\\d\\d|3[0-5]\\d|36[0-6])|W(0[1-9]|[1-4]\\d|5[0-3])\\-(\\d))T(?:(24)|(24):(00)|(24):(00):(00))(?:(Z)|([\\-\\+])(\\d{2})(?::(\\d{2}))?)?$/,\n    /^(\\d{4}|[\\-\\+]\\d{6})(?:(0[1-9]|1[012])(0[1-9]|[12]\\d|30|31)|(00[1-9]|0[1-9]\\d|[12]\\d\\d|3[0-5]\\d|36[0-6])|W(0[1-9]|[1-4]\\d|5[0-3])(\\d))T(?:((?:[01]\\d|2[0-3])(?:\\.\\d+)?)|([01]\\d|2[0-3])([0-5]\\d(?:\\.\\d+)?)|([01]\\d|2[0-3])([0-5]\\d)((?:[0-5]\\d|60)(?:\\.\\d+)?))(?:(Z)|([\\-\\+])(\\d{2})(\\d{2})?)?$/,\n    /^(\\d{4}|[\\-\\+]\\d{6})\\-(?:(0[1-9]|1[012])\\-(0[1-9]|[12]\\d|30|31)|(00[1-9]|0[1-9]\\d|[12]\\d\\d|3[0-5]\\d|36[0-6])|W(0[1-9]|[1-4]\\d|5[0-3])\\-(\\d))T(?:((?:[01]\\d|2[0-3])(?:\\.\\d+)?)|([01]\\d|2[0-3]):([0-5]\\d(?:\\.\\d+)?)|([01]\\d|2[0-3]):([0-5]\\d):((?:[0-5]\\d|60)(?:\\.\\d+)?))(?:(Z)|([\\-\\+])(\\d{2})(?::(\\d{2}))?)?$/\n  ],\n  builder (parts): Date {\n    const year = +parts[1]\n    const hours = +(parts[7] || parts[8] || parts[10])\n    const minutes = +(parts[9] || parts[11] || 0) + 60 * (hours - (hours | 0))\n    const seconds = +(parts[12] || 0) + 60 * (minutes - (minutes | 0))\n    const milliseconds = Math.round(1000 * (seconds - (seconds | 0)))\n    let month = 0\n    let day\n\n    switch (true) {\n      case parts[2] !== undefined:\n        month = +parts[2] - 1\n        day = +parts[3]\n        break\n\n      case parts[4] !== undefined:\n        day = +parts[4]\n        break\n\n      default:\n        // NOTE 2.2.10 calendar week number\n        // \"first calendar week of a year is that one which includes the first Thursday of that year\"\n        day = +parts[6] + 7 * +parts[5] - 7 * +(new Date(year, 0, 1).getDay() < 5) - new Date(year, 0, 1).getDay() + 1\n    }\n\n    if (parts[13]) { // Zulu time\n      return new Date(Date.UTC(year, month, day, hours, minutes, seconds, milliseconds))\n    }\n\n    const date = new Date(year, month, day, hours, minutes, seconds, milliseconds)\n    const offset = getSignFactor(parts[14]) * (+parts[15] * 60 + (+parts[16] || 0))\n\n    correctOffset(date, offset)\n    return date\n  }\n}\n\nexport default parser\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/datetime.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "parser",
+    "memberof": "js/parser/datetime.js",
+    "static": true,
+    "longname": "js/parser/datetime.js~parser",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/datetime.js",
+    "importStyle": "parser",
+    "description": "",
+    "lineNumber": 10,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"pattern\": *, \"builder\": function}"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "js/parser/hhmmsstz.js",
+    "content": "// @flow\n\nimport type {IParser} from '../interface'\nimport {correctOffset, getSignFactor} from './util'\n\n// NOTE 4.2.2.4 Representations with decimal fraction: \"A decimal fraction shall have at least one digit\"\n/**\n * @ignore\n */\nconst parser: IParser = {\n  pattern: [\n    /* AB AC */\n    /^T?(?:(24)|(24)(00)|(24)(00)(00))(?:(Z)|([\\-\\+])(\\d{2})(\\d{2})?)?$/,\n    /^T?(?:(24)|(24):(00)|(24):(00):(00))(?:(Z)|([\\-\\+])(\\d{2})(?::(\\d{2}))?)?$/,\n    /^T?(?:((?:[01]\\d|2[0-3])(?:\\.\\d+)?)|([01]\\d|2[0-3])([0-5]\\d(?:\\.\\d+)?)|([01]\\d|2[0-3])([0-5]\\d)((?:[0-5]\\d|60)(?:\\.\\d+)?))(?:(Z)|([\\-\\+])(\\d{2})(\\d{2})?)?$/,\n    /^T?(?:((?:[01]\\d|2[0-3])(?:\\.\\d+)?)|([01]\\d|2[0-3]):([0-5]\\d(?:\\.\\d+)?)|([01]\\d|2[0-3]):([0-5]\\d):((?:[0-5]\\d|60)(?:\\.\\d+)?))(?:(Z)|([\\-\\+])(\\d{2})(?::(\\d{2}))?)?$/\n  ],\n  builder (parts, date) {\n    const hours = +(parts[1] || parts[2] || parts[4])\n    const minutes = +(parts[3] || parts[5] || 0) + 60 * (hours - (hours | 0))\n    const seconds = +(parts[6] || 0) + 60 * (minutes - (minutes | 0))\n    const milliseconds = 1000 * (seconds - (seconds | 0))\n\n    // Expressions of the difference between local time and UTC of day are a component in the representations\n    // ...they shall not be used as self-standing expressions.\n    if (parts[7]) { // Z for UTC\n      date.setUTCHours(hours | 0)\n      date.setUTCMinutes(minutes | 0)\n      date.setUTCSeconds(seconds | 0)\n      date.setUTCMilliseconds(milliseconds | 0)\n    } else {\n      date.setHours(hours | 0)\n      date.setMinutes(minutes | 0)\n      date.setSeconds(seconds | 0)\n      date.setMilliseconds(milliseconds | 0)\n    }\n\n    // NOTE Time zones in ISO 8601 are represented as local time (with the location unspecified), as UTC, or as an offset from UTC.\n    const offset = getSignFactor(parts[8]) * (+parts[9] * 60 + (+parts[10] || 0))\n\n    correctOffset(date, offset)\n\n    return date\n  }\n}\n\nexport default parser\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/hhmmsstz.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "variable",
+    "name": "parser",
+    "memberof": "js/parser/hhmmsstz.js",
+    "static": true,
+    "longname": "js/parser/hhmmsstz.js~parser",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/hhmmsstz.js",
+    "importStyle": "parser",
+    "description": "",
+    "lineNumber": 10,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"pattern\": *, \"builder\": function}"
+      ]
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "js/parser/index.js",
+    "content": "/**\n * Strict ISO8601 datetime parser\n * @module antongolub/iso8601\n */\n\n// @flow\nimport type {\n  IParser,\n  IISOString\n} from '../interface'\n\nimport YY from './yy'\nimport YYYYMMDD from './yyyymmdd'\nimport YYYYDDD from './yyyyddd'\nimport YYYYWWWD from './yyyywwwd'\nimport HHMMSSTZ from './hhmmsstz'\nimport DATETIME from './datetime'\n\nconst dateParsers = [YY, YYYYMMDD, YYYYDDD, YYYYWWWD]\nconst timeParsers = [HHMMSSTZ]\nconst dateTimeParsers = [DATETIME]\nconst allParsers = [...dateTimeParsers, ...dateParsers, ...timeParsers]\n\n/**\n * Normalizes input string.\n * @ignore\n * @param {Mixed} value\n * @return {string}\n */\nconst normalizeInput = (value: IISOString) => ('' + value).replace(',', '.')\n\n/**\n * Checks whether given date instance is valid.\n * @ignore\n * @param {Mixed} date\n * @return {Boolean}\n */\nconst isValidDate = (date) => date instanceof Date && !isNaN(date.getTime())\n\n/**\n * @ignore\n * @param {string} group\n * @return {IParser[]}\n */\nconst getParsers = (group?: string): Array<IParser> => {\n  switch (group && ('' + group).toLowerCase()) {\n    case 'localtime':\n    case 'time':\n      return timeParsers\n\n    case 'date':\n      return dateParsers\n\n    case 'datetime':\n      return dateTimeParsers\n\n    default:\n      return allParsers\n  }\n}\n\n/**\n * Strict ISO 8601 date parser\n * @example\n parse('1970-01-01T00:00:00.000Z');         // new Date(0)\n parse(1950-02');                           // new Date(1950, 1)\n parse('1960W011');                         // new Date(1960, 0, 4)\n parse('1950-205');                         // new Date(1950, 6, 24)\n parse('1997-W01-2')                        // new Date(1996, 11, 31)\n parse('+002015-W02-4');                    // new Date(2015, 0, 8);\n parse('2052-05-09T15:20.5');               // new Date(2052, 4, 9, 15, 20, 30, 0);\n\n * @module antongolub/iso8601\n * @public\n * @param {String} input\n * @param {String} [group] parser pattern\n * @param {Date} [date] Default date\n * @return {Date/undefined}\n */\nexport default function parse (input: IISOString, group?: string, date?: Date): Date | void {\n  const parsers = getParsers(group)\n  const value = normalizeInput(input)\n\n  for (let i = 0; i < parsers.length; i++) {\n    const parser = parsers[i]\n    const patterns = parser.pattern\n\n    for (let j = 0; j < patterns.length; j++) {\n      const parts = patterns[j].exec(value)\n\n      if (parts) {\n        const initialDate = date && isValidDate(date)\n          ? new Date(date)\n          : new Date()\n\n        return parser.builder(parts, initialDate)\n      }\n    }\n  }\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "variable",
+    "name": "dateParsers",
+    "memberof": "js/parser/index.js",
+    "static": true,
+    "longname": "js/parser/index.js~dateParsers",
+    "access": "public",
+    "export": false,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "variable",
+    "name": "timeParsers",
+    "memberof": "js/parser/index.js",
+    "static": true,
+    "longname": "js/parser/index.js~timeParsers",
+    "access": "public",
+    "export": false,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "variable",
+    "name": "dateTimeParsers",
+    "memberof": "js/parser/index.js",
+    "static": true,
+    "longname": "js/parser/index.js~dateTimeParsers",
+    "access": "public",
+    "export": false,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "variable",
+    "name": "allParsers",
+    "memberof": "js/parser/index.js",
+    "static": true,
+    "longname": "js/parser/index.js~allParsers",
+    "access": "public",
+    "export": false,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "function",
+    "name": "normalizeInput",
+    "memberof": "js/parser/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/parser/index.js~normalizeInput",
+    "access": "public",
+    "export": false,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": null,
+    "description": "Normalizes input string.",
+    "lineNumber": 25,
+    "ignore": true,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Mixed"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "name": "isValidDate",
+    "memberof": "js/parser/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/parser/index.js~isValidDate",
+    "access": "public",
+    "export": false,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": null,
+    "description": "Checks whether given date instance is valid.",
+    "lineNumber": 33,
+    "ignore": true,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Mixed"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "date",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "function",
+    "name": "getParsers",
+    "memberof": "js/parser/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/parser/index.js~getParsers",
+    "access": "public",
+    "export": false,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 40,
+    "ignore": true,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "group",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "IParser[]"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "function",
+    "name": "parse",
+    "memberof": "js/parser/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/parser/index.js~parse",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601",
+    "importStyle": "parse",
+    "description": "Strict ISO 8601 date parser",
+    "examples": [
+      "parse('1970-01-01T00:00:00.000Z');         // new Date(0)\nparse(1950-02');                           // new Date(1950, 1)\nparse('1960W011');                         // new Date(1960, 0, 4)\nparse('1950-205');                         // new Date(1950, 6, 24)\nparse('1997-W01-2')                        // new Date(1996, 11, 31)\nparse('+002015-W02-4');                    // new Date(2015, 0, 8);\nparse('2052-05-09T15:20.5');               // new Date(2052, 4, 9, 15, 20, 30, 0);"
+    ],
+    "lineNumber": 75,
+    "unknown": [
+      {
+        "tagName": "@module",
+        "tagValue": "antongolub/iso8601"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "input",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "group",
+        "description": "parser pattern"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Date"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "date",
+        "description": "Default date"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Date/undefined"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "file",
+    "name": "js/parser/util.js",
+    "content": "// @flow\n\n/**\n * @ignore\n */\nexport function correctOffset (date: Date, offset: number): void {\n  if (!isNaN(offset)) {\n    date.setMinutes(date.getMinutes() - offset - date.getTimezoneOffset())\n  }\n}\n\n/**\n * @ignore\n */\nexport function getSignFactor (value: string): number {\n  return value === '+'\n    ? 1\n    : -1\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/util.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 64,
+    "kind": "function",
+    "name": "correctOffset",
+    "memberof": "js/parser/util.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/parser/util.js~correctOffset",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/util.js",
+    "importStyle": "{correctOffset}",
+    "description": "",
+    "lineNumber": 6,
+    "ignore": true,
+    "params": [
+      {
+        "name": "date",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "offset",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "getSignFactor",
+    "memberof": "js/parser/util.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "js/parser/util.js~getSignFactor",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/util.js",
+    "importStyle": "{getSignFactor}",
+    "description": "",
+    "lineNumber": 15,
+    "ignore": true,
+    "params": [
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "name": "js/parser/yy.js",
+    "content": "// @flow\n\nimport type {IParser} from '../interface'\n\n// 4.1.2.3 Representations with reduced accuracy: centuries\n/**\n * @ignore\n */\nconst parser: IParser = {\n  pattern: [\n    /^(\\d{2}|[\\-\\+]\\d{4})$/ // NOTE There's no extended representation\n  ],\n  builder (parts) {\n    const year = +parts[1] * 100\n    return new Date(year, 0)\n  }\n}\n\nexport default parser\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/yy.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 67,
+    "kind": "variable",
+    "name": "parser",
+    "memberof": "js/parser/yy.js",
+    "static": true,
+    "longname": "js/parser/yy.js~parser",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/yy.js",
+    "importStyle": "parser",
+    "description": "",
+    "lineNumber": 7,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"pattern\": *, \"builder\": function}"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "name": "js/parser/yyyyddd.js",
+    "content": "// @flow\n\nimport type {IParser} from '../interface'\n\n// 4.1.3 Ordinal date\n/**\n * @ignore\n */\nconst YYYYDDD: IParser = {\n  pattern: [\n    /^(\\d{4}|[\\-\\+]\\d{6})\\-?(00[1-9]|0[1-9]\\d|[12]\\d\\d|3[0-5]\\d|36[0-6])$/\n  ],\n  builder (parts) {\n    const year = +parts[1]\n    const day = +parts[2]\n\n    return new Date(year, 0, day)\n  }\n}\n\nexport default YYYYDDD\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/yyyyddd.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 69,
+    "kind": "variable",
+    "name": "YYYYDDD",
+    "memberof": "js/parser/yyyyddd.js",
+    "static": true,
+    "longname": "js/parser/yyyyddd.js~YYYYDDD",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/yyyyddd.js",
+    "importStyle": "YYYYDDD",
+    "description": "",
+    "lineNumber": 7,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"pattern\": *, \"builder\": function}"
+      ]
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "name": "js/parser/yyyymmdd.js",
+    "content": "// @flow\n\nimport type {IParser} from '../interface'\n\n// 4.1.2 Calendar date\n/**\n * @ignore\n */\nconst YYYYMMDD: IParser = {\n  pattern: [\n    /^(\\d{4}|[\\-\\+]\\d{6})(?:\\-(0[1-9]|1[012])(?:\\-(0[1-9]|[12]\\d|30|31))?)?$/,     // Extended\n    /^(\\d{4}|[\\-\\+]\\d{6})(0[1-9]|1[012])(0[1-9]|[12]\\d|30|31)$/                    // Basic\n  ],\n  builder (parts) {\n    const year = +parts[1]\n    const month = +parts[2] - 1 || 0\n    const day = +parts[3] || 1\n\n    return new Date(year, month, day)\n  }\n}\n\nexport default YYYYMMDD\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/yyyymmdd.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 71,
+    "kind": "variable",
+    "name": "YYYYMMDD",
+    "memberof": "js/parser/yyyymmdd.js",
+    "static": true,
+    "longname": "js/parser/yyyymmdd.js~YYYYMMDD",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/yyyymmdd.js",
+    "importStyle": "YYYYMMDD",
+    "description": "",
+    "lineNumber": 7,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"pattern\": *, \"builder\": function}"
+      ]
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "js/parser/yyyywwwd.js",
+    "content": "// @flow\n\nimport type {IParser} from '../interface'\n\n// 4.1.4 Week date\n/**\n * @ignore\n */\nconst YYYYWWWD: IParser = {\n  pattern: [\n    /^(\\d{4}|[\\-\\+]\\d{6})W(0[1-9]|[1-4]\\d|5[0-3])([1-7])?$/,             // Basic\n    /^(\\d{4}|[\\-\\+]\\d{6})\\-W(0[1-9]|[1-4]\\d|5[0-3])(?:\\-([1-7]))?$/      // Extended\n  ],\n  builder (parts) {\n    const year = +parts[1]\n    const week = +parts[2]\n    const offset = 7 * +(new Date(year, 0, 1).getDay() < 5) + new Date(year, 0, 1).getDay() - 1\n    const day = +(parts[3] || 1) + 7 * week - offset\n\n    return new Date(year, 0, day)\n  }\n}\n\nexport default YYYYWWWD\n",
+    "static": true,
+    "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/yyyywwwd.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "variable",
+    "name": "YYYYWWWD",
+    "memberof": "js/parser/yyyywwwd.js",
+    "static": true,
+    "longname": "js/parser/yyyywwwd.js~YYYYWWWD",
+    "access": "public",
+    "export": true,
+    "importPath": "@antongolub/iso8601/target/es5/yyyywwwd.js",
+    "importStyle": "YYYYWWWD",
+    "description": "",
+    "lineNumber": 7,
+    "ignore": true,
+    "type": {
+      "types": [
+        "{\"pattern\": *, \"builder\": function}"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# ISO 8601\n> Strict ISO8601 datetime parser\n\n[![Build Status](https://travis-ci.com/antongolub/iso8601.svg?branch=master)](https://travis-ci.com/antongolub/iso8601)\n[![npm (tag)](https://badgen.net/npm/v/@antongolub/iso8601)](https://www.npmjs.com/package/@antongolub/iso8601)\n[![dependencyStatus](https://badgen.net/david/dep/antongolub/iso8601)](https://david-dm.org/antongolub/iso8601)\n[![devDependencyStatus](https://badgen.net/david/dev/antongolub/iso8601)](https://david-dm.org/antongolub/iso8601)\n[![Maintainability](https://api.codeclimate.com/v1/badges/ed234c819b9e225b2bab/maintainability)](https://codeclimate.com/github/antongolub/iso8601/maintainability)\n[![Test Coverage](https://api.codeclimate.com/v1/badges/ed234c819b9e225b2bab/test_coverage)](https://codeclimate.com/github/antongolub/iso8601/test_coverage)\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)\n[![Greenkeeper badge](https://badges.greenkeeper.io/antongolub/iso8601.svg)](https://greenkeeper.io/)\n\n## Yet another one date parser?\nIt's 20** and if you operate with dates, you should take one of these:\n* [momentjs](https://momentjs.com/)\n* [date-fns](https://date-fns.org/)\n\nBut if you need _only_ iso strings and bundle size matters, try out this lib.\n\n## Install\n```bash\nnpm add @antongolub/iso8601\nyarn add @antongolub/iso8601\n```\n\n## Usage\n```javascript\n    \n    const input = '2004002T10,26' // YYYYWwwDThh,hh — *\n    const parsed = parser(input)  // new Date(2004, 0, 2, 10, 15, 36, 0)\n    \n    // 4.3.3 Representations other than complete\n    // For reduced accuracy, decimal or expanded representations of date and time of day,\n    // any of the representations in 4.1.2 (calendar dates), 4.1.3 (ordinal dates) \n    // or 4.1.4 (week dates) followed immediately by the time designator [T] \n    // may be combined with any of the representations in 4.2.2.2 through 4.2.2.4 (local time),\n    // 4.2.4 (UTC of day) or 4.2.5.2 (local time and the difference from UTC) provided that \n```\n\n\n",
+    "longname": "/home/travis/build/antongolub/iso8601/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@antongolub/iso8601\",\n  \"version\": \"0.2.0\",\n  \"description\": \"Strict ISO8601 datetime parser\",\n  \"main\": \"target/es5/index.js\",\n  \"types\": \"typings/index.d.ts\",\n  \"typescript\": {\n    \"definition\": \"typings/index.d.ts\"\n  },\n  \"scripts\": {\n    \"jest\": \"jest -w 1\",\n    \"lint\": \"standard-flow src/**/*.js\",\n    \"flow\": \"flow\",\n    \"test\": \"npm run lint && npm run flow && npm run jest\",\n    \"flow:coverage\": \"flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90\",\n    \"build\": \"npm run build:es5 && npm run docs\",\n    \"build:es5\": \"BABEL_ENV=production babel src/main/js --out-dir target/es5\",\n    \"test:report\": \"npm test && npm run coveralls:push\",\n    \"coveralls:push\": \"cat ./coverage/lcov.info | coveralls\",\n    \"docs\": \"esdoc\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/antongolub/iso8601.git\"\n  },\n  \"files\": [\n    \"README.md\",\n    \"CHANGELOG.md\",\n    \"target\",\n    \"typings\",\n    \"flow-typed\"\n  ],\n  \"keywords\": [\n    \"iso8601\",\n    \"ISO 8601\",\n    \"datetime\",\n    \"date\",\n    \"time\",\n    \"parser\"\n  ],\n  \"author\": \"Anton Golub <a.golub@qiwi.com>\",\n  \"license\": \"MIT\",\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@babel/cli\": \"^7.5.5\",\n    \"@babel/core\": \"^7.5.5\",\n    \"@babel/plugin-proposal-object-rest-spread\": \"^7.5.5\",\n    \"@babel/plugin-transform-flow-strip-types\": \"^7.4.4\",\n    \"@babel/plugin-transform-runtime\": \"^7.5.5\",\n    \"@babel/polyfill\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.5.5\",\n    \"@babel/preset-flow\": \"^7.0.0\",\n    \"@qiwi/semantic-release-gh-pages-plugin\": \"^1.10.5\",\n    \"@semantic-release/changelog\": \"^3.0.4\",\n    \"@semantic-release/git\": \"^7.0.16\",\n    \"@semantic-release/github\": \"^5.4.2\",\n    \"@semantic-release/npm\": \"^5.1.13\",\n    \"babel-core\": \"^7.0.0-bridge.0\",\n    \"babel-preset-minify\": \"^0.5.1\",\n    \"coveralls\": \"^3.0.6\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-coverage-plugin\": \"^1.1.0\",\n    \"esdoc-flow-plugin\": \"^1.0.0\",\n    \"esdoc-importpath-plugin\": \"^1.0.2\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"flow-bin\": \"^0.105.2\",\n    \"flow-coverage-report\": \"^0.6.1\",\n    \"flow-remove-types\": \"^2.105.2\",\n    \"jest\": \"^24.9.0\",\n    \"lodash\": \"^4.17.15\",\n    \"semantic-release\": \"^15.13.21\",\n    \"standard-flow\": \"^1.0.0\"\n  },\n  \"jest\": {\n    \"testEnvironment\": \"node\",\n    \"collectCoverage\": true,\n    \"collectCoverageFrom\": [\n      \"<rootDir>/src/main/**/*.js\"\n    ],\n    \"testMatch\": [\n      \"<rootDir>/src/test/**/*.js\"\n    ],\n    \"coveragePathIgnorePatterns\": [\n      \"/node_modules/\",\n      \"<rootDir>/src/main/js/interface.js\"\n    ]\n  },\n  \"standard-flow\": {\n    \"parser\": \"babel-eslint\",\n    \"globals\": [\n      \"it\",\n      \"expect\",\n      \"describe\"\n    ],\n    \"ignore\": [],\n    \"plugins\": [\n      \"flowtype\"\n    ],\n    \"settings\": {\n      \"flowtype\": {\n        \"onlyFilesWithFlowAnnotation\": true\n      }\n    }\n  },\n  \"release\": {\n    \"branch\": \"master\",\n    \"plugins\": [\n      \"@semantic-release/release-notes-generator\",\n      \"@semantic-release/changelog\",\n      \"@semantic-release/git\",\n      \"@semantic-release/github\",\n      \"@semantic-release/npm\",\n      \"@qiwi/semantic-release-gh-pages-plugin\"\n    ]\n  }\n}\n",
+    "longname": "/home/travis/build/antongolub/iso8601/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

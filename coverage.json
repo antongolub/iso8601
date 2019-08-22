@@ -1,0 +1,52 @@
+{
+  "coverage": "75%",
+  "expectCount": 16,
+  "actualCount": 12,
+  "files": {
+    "js/parser/datetime.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "js/parser/hhmmsstz.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "js/parser/index.js": {
+      "expectCount": 8,
+      "actualCount": 4,
+      "undocumentLines": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "js/parser/util.js": {
+      "expectCount": 2,
+      "actualCount": 2,
+      "undocumentLines": []
+    },
+    "js/parser/yy.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "js/parser/yyyyddd.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "js/parser/yyyymmdd.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "js/parser/yyyywwwd.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    }
+  }
+}
