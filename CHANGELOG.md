@@ -1,3 +1,15 @@
+# [0.2.0](https://github.com/antongolub/iso8601/compare/v0.1.1...v0.2.0) (2019-08-22)
+
+
+### Bug Fixes
+
+* **travis:** fix build runner cmd & migrate to new `codeclimate reporter` ([4f59b92](https://github.com/antongolub/iso8601/commit/4f59b92))
+
+
+### Features
+
+* add TS libdefs ([94098a1](https://github.com/antongolub/iso8601/commit/94098a1)), closes [#25](https://github.com/antongolub/iso8601/issues/25)
+
 ## [0.1.1](https://github.com/antongolub/iso8601/compare/v0.1.0...v0.1.1) (2018-08-17)
 
 
