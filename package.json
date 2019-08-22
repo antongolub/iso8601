@@ -13,7 +13,8 @@
     "flow": "flow",
     "test": "npm run lint && npm run flow && npm run jest",
     "flow:coverage": "flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90",
-    "build": "BABEL_ENV=production babel src/main/js --out-dir target/es5",
+    "build": "npm run build:es5 && npm run docs",
+    "build:es5": "BABEL_ENV=production babel src/main/js --out-dir target/es5",
     "test:report": "npm test && npm run coveralls:push",
     "coveralls:push": "cat ./coverage/lcov.info | coveralls",
     "docs": "esdoc"
