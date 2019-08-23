@@ -2,9 +2,9 @@
 > Strict ISO8601 datetime parser
 
 [![Build Status](https://travis-ci.com/antongolub/iso8601.svg?branch=master)](https://travis-ci.com/antongolub/iso8601)
-[![npm (tag)](https://badgen.net/npm/v/@antongolub/iso8601)](https://www.npmjs.com/package/@antongolub/iso8601)
-[![dependencyStatus](https://badgen.net/david/dep/antongolub/iso8601)](https://david-dm.org/antongolub/iso8601)
-[![devDependencyStatus](https://badgen.net/david/dev/antongolub/iso8601)](https://david-dm.org/antongolub/iso8601)
+[![npm (tag)](https://img.shields.io/npm/v/@antongolub/iso8601/latest.svg)](https://www.npmjs.com/package/@antongolub/iso8601)
+[![dependencyStatus](https://img.shields.io/david/antongolub/iso8601.svg?maxAge=3600)](https://david-dm.org/antongolub/iso8601)
+[![devDependencyStatus](https://img.shields.io/david/dev/antongolub/iso8601.svg?maxAge=3600)](https://david-dm.org/antongolub/iso8601)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ed234c819b9e225b2bab/maintainability)](https://codeclimate.com/github/antongolub/iso8601/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ed234c819b9e225b2bab/test_coverage)](https://codeclimate.com/github/antongolub/iso8601/test_coverage)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
