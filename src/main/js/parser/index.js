@@ -39,6 +39,15 @@ const isValidDate = (date) => date instanceof Date && !isNaN(date.getTime())
 
 /**
  * @ignore
+ * @param {Date/undefined} date
+ * @return {Date}
+ */
+const normalizeDate = (date): Date => date && isValidDate(date)
+  ? new Date(date)
+  : new Date()
+
+/**
+ * @ignore
  * @param {string} group
  * @return {IParser[]}
  */
@@ -63,7 +72,7 @@ const getParsers = (group?: string): Array<IParser> => {
  * Strict ISO 8601 date parser
  * @example
  parse('1970-01-01T00:00:00.000Z');         // new Date(0)
- parse(1950-02');                           // new Date(1950, 1)
+ parse('1950-02');                          // new Date(1950, 1)
  parse('1960W011');                         // new Date(1960, 0, 4)
  parse('1950-205');                         // new Date(1950, 6, 24)
  parse('1997-W01-2')                        // new Date(1996, 11, 31)
@@ -80,6 +89,7 @@ const getParsers = (group?: string): Array<IParser> => {
 export default function parse (input: IISOString, group?: string, date?: Date): Date | void {
   const parsers = getParsers(group)
   const value = normalizeInput(input)
+  const initialDate = normalizeDate(date)
 
   for (let i = 0; i < parsers.length; i++) {
     const parser = parsers[i]
@@ -89,10 +99,6 @@ export default function parse (input: IISOString, group?: string, date?: Date): 
       const parts = patterns[j].exec(value)
 
       if (parts) {
-        const initialDate = date && isValidDate(date)
-          ? new Date(date)
-          : new Date()
-
         return parser.builder(parts, initialDate)
       }
     }
