@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/antongolub/iso8601/compare/v1.0.0...v1.0.1) (2019-08-24)
+
+
+### Performance Improvements
+
+* **parser:** iterator improvement ([0d13f17](https://github.com/antongolub/iso8601/commit/0d13f17))
+
 # [1.0.0](https://github.com/antongolub/iso8601/compare/v0.2.0...v1.0.0) (2019-08-22)
 
 
