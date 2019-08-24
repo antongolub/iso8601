@@ -82,8 +82,8 @@ const getParsers = (group?: string): Array<IParser> => {
  * @module antongolub/iso8601
  * @public
  * @param {String} input
- * @param {String} [group] parser pattern
- * @param {Date} [date] Default date
+ * @param {String} [group] 'date', 'time', 'datetime' are permissible; applies all if empty
+ * @param {Date} [date] Ref date for 4.2.2 Local time representations. Defaults to new Date().
  * @return {Date/undefined}
  */
 export default function parse (input: IISOString, group?: string, date?: Date): Date | void {
