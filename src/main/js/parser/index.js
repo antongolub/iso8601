@@ -19,7 +19,7 @@ import DATETIME from './datetime'
 const dateParsers = [YY, YYYYMMDD, YYYYDDD, YYYYWWWD]
 const timeParsers = [HHMMSSTZ]
 const dateTimeParsers = [DATETIME]
-const allParsers = [...dateTimeParsers, ...dateParsers, ...timeParsers]
+const allParsers = [...timeParsers, ...dateTimeParsers, ...dateParsers]
 
 /**
  * Normalizes input string.
@@ -91,10 +91,10 @@ export default function parse (input: IISOString, group?: string, date?: Date): 
   const value = normalizeInput(input)
   const initialDate = normalizeDate(date)
 
-  for (let i = 0; i < parsers.length; i++) {
+  for (let i = parsers.length; i--;) {
     const {pattern, builder} = parsers[i]
 
-    for (let j = 0; j < pattern.length; j++) {
+    for (let j = pattern.length; j--;) {
       const parts = pattern[j].exec(value)
 
       if (parts) {
