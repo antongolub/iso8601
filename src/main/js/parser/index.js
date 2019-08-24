@@ -92,14 +92,13 @@ export default function parse (input: IISOString, group?: string, date?: Date): 
   const initialDate = normalizeDate(date)
 
   for (let i = 0; i < parsers.length; i++) {
-    const parser = parsers[i]
-    const patterns = parser.pattern
+    const {pattern, builder} = parsers[i]
 
-    for (let j = 0; j < patterns.length; j++) {
-      const parts = patterns[j].exec(value)
+    for (let j = 0; j < pattern.length; j++) {
+      const parts = pattern[j].exec(value)
 
       if (parts) {
-        return parser.builder(parts, initialDate)
+        return builder(parts, initialDate)
       }
     }
   }
