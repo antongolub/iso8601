@@ -56,7 +56,7 @@ import DATETIME from &apos;./datetime&apos;
 const dateParsers = [YY, YYYYMMDD, YYYYDDD, YYYYWWWD]
 const timeParsers = [HHMMSSTZ]
 const dateTimeParsers = [DATETIME]
-const allParsers = [...dateTimeParsers, ...dateParsers, ...timeParsers]
+const allParsers = [...timeParsers, ...dateTimeParsers, ...dateParsers]
 
 /**
  * Normalizes input string.
@@ -73,6 +73,15 @@ const normalizeInput = (value: IISOString) =&gt; (&apos;&apos; + value).replace(
  * @return {Boolean}
  */
 const isValidDate = (date) =&gt; date instanceof Date &amp;&amp; !isNaN(date.getTime())
+
+/**
+ * @ignore
+ * @param {Date/undefined} date
+ * @return {Date}
+ */
+const normalizeDate = (date): Date =&gt; date &amp;&amp; isValidDate(date)
+  ? new Date(date)
+  : new Date()
 
 /**
  * @ignore
@@ -100,7 +109,7 @@ const getParsers = (group?: string): Array&lt;IParser&gt; =&gt; {
  * Strict ISO 8601 date parser
  * @example
  parse(&apos;1970-01-01T00:00:00.000Z&apos;);         // new Date(0)
- parse(1950-02&apos;);                           // new Date(1950, 1)
+ parse(&apos;1950-02&apos;);                          // new Date(1950, 1)
  parse(&apos;1960W011&apos;);                         // new Date(1960, 0, 4)
  parse(&apos;1950-205&apos;);                         // new Date(1950, 6, 24)
  parse(&apos;1997-W01-2&apos;)                        // new Date(1996, 11, 31)
@@ -117,20 +126,16 @@ const getParsers = (group?: string): Array&lt;IParser&gt; =&gt; {
 export default function parse (input: IISOString, group?: string, date?: Date): Date | void {
   const parsers = getParsers(group)
   const value = normalizeInput(input)
+  const initialDate = normalizeDate(date)
 
-  for (let i = 0; i &lt; parsers.length; i++) {
-    const parser = parsers[i]
-    const patterns = parser.pattern
+  for (let i = parsers.length; i--;) {
+    const {pattern, builder} = parsers[i]
 
-    for (let j = 0; j &lt; patterns.length; j++) {
-      const parts = patterns[j].exec(value)
+    for (let j = pattern.length; j--;) {
+      const parts = pattern[j].exec(value)
 
       if (parts) {
-        const initialDate = date &amp;&amp; isValidDate(date)
-          ? new Date(date)
-          : new Date()
-
-        return parser.builder(parts, initialDate)
+        return builder(parts, initialDate)
       }
     }
   }
