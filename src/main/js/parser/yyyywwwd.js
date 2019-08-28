@@ -8,8 +8,8 @@ import type {IParser} from '../interface'
  */
 const YYYYWWWD: IParser = {
   pattern: [
-    /^(\d{4}|[\-\+]\d{6})W(0[1-9]|[1-4]\d|5[0-3])([1-7])?$/,             // Basic
-    /^(\d{4}|[\-\+]\d{6})\-W(0[1-9]|[1-4]\d|5[0-3])(?:\-([1-7]))?$/      // Extended
+    /^(\d{4}|[\-+]\d{6})W(0[1-9]|[1-4]\d|5[0-3])([1-7])?$/,             // Basic
+    /^(\d{4}|[\-+]\d{6})-W(0[1-9]|[1-4]\d|5[0-3])(?:-([1-7]))?$/      // Extended
   ],
   builder (parts) {
     const year = +parts[1]

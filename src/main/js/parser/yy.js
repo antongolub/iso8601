@@ -8,7 +8,7 @@ import type {IParser} from '../interface'
  */
 const parser: IParser = {
   pattern: [
-    /^(\d{2}|[\-\+]\d{4})$/ // NOTE There's no extended representation
+    /^(\d{2}|[\-+]\d{4})$/ // NOTE There's no extended representation
   ],
   builder (parts) {
     const year = +parts[1] * 100
