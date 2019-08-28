@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/antongolub/iso8601/compare/v1.0.1...v1.1.0) (2019-08-28)
+
+
+### Features
+
+* let ref date be a string or instant ([8b6c521](https://github.com/antongolub/iso8601/commit/8b6c521)), closes [#35](https://github.com/antongolub/iso8601/issues/35)
+
 ## [1.0.1](https://github.com/antongolub/iso8601/compare/v1.0.0...v1.0.1) (2019-08-24)
 
 
