@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "js/index.js",
-    "content": "import parser from './parser'\n\nexport default parser\n",
+    "content": "// @flow\n\nimport parser from './parser'\n\nexport default parser\n",
     "static": true,
     "longname": "/home/travis/build/antongolub/iso8601/src/main/js/index.js",
     "access": "public",
@@ -578,7 +578,7 @@
     "__docId__": 49,
     "kind": "file",
     "name": "js/interface.js",
-    "content": "// @flow\nexport type IISOString = string\n\nexport type IISODate = {\n  constructor(magic: IMagicParam): IISODate\n}\n\nexport type IMagicParam = string\n\nexport type IPart = string\nexport type IParts = Array<IPart>\nexport type IBuilder = (parts: IParts, date: Date) => Date\n\nexport type IParser = {\n  pattern: Array<RegExp>,\n  builder: IBuilder\n}\n",
+    "content": "// @flow\nexport type IISOString = string\n\nexport type IISODate = {\n  constructor(input: IInput): IISODate\n}\n\nexport type IInput = string\n\nexport type IPart = string\nexport type IParts = Array<IPart>\nexport type IBuilder = (parts: IParts, date: Date) => Date\n\nexport type IParser = {\n  pattern: Array<RegExp>,\n  builder: IBuilder\n}\n",
     "static": true,
     "longname": "/home/travis/build/antongolub/iso8601/src/main/js/interface.js",
     "access": "public",
@@ -651,7 +651,7 @@
     "__docId__": 54,
     "kind": "file",
     "name": "js/parser/index.js",
-    "content": "/**\n * Strict ISO8601 datetime parser\n * @module antongolub/iso8601\n */\n\n// @flow\nimport type {\n  IParser,\n  IISOString\n} from '../interface'\n\nimport YY from './yy'\nimport YYYYMMDD from './yyyymmdd'\nimport YYYYDDD from './yyyyddd'\nimport YYYYWWWD from './yyyywwwd'\nimport HHMMSSTZ from './hhmmsstz'\nimport DATETIME from './datetime'\n\nconst dateParsers = [YY, YYYYMMDD, YYYYDDD, YYYYWWWD]\nconst timeParsers = [HHMMSSTZ]\nconst dateTimeParsers = [DATETIME]\nconst allParsers = [...timeParsers, ...dateTimeParsers, ...dateParsers]\n\n/**\n * Normalizes input string.\n * @ignore\n * @param {Mixed} value\n * @return {string}\n */\nconst normalizeInput = (value: IISOString) => ('' + value).replace(',', '.')\n\n/**\n * Checks whether given date instance is valid.\n * @ignore\n * @param {Mixed} date\n * @return {Boolean}\n */\nconst isValidDate = (date) => date instanceof Date && !isNaN(date.getTime())\n\n/**\n * @ignore\n * @param {Date/undefined} date\n * @return {Date}\n */\nconst normalizeDate = (date): Date => date && isValidDate(date)\n  ? new Date(date)\n  : new Date()\n\n/**\n * @ignore\n * @param {string} group\n * @return {IParser[]}\n */\nconst getParsers = (group?: string): Array<IParser> => {\n  switch (group && ('' + group).toLowerCase()) {\n    case 'localtime':\n    case 'time':\n      return timeParsers\n\n    case 'date':\n      return dateParsers\n\n    case 'datetime':\n      return dateTimeParsers\n\n    default:\n      return allParsers\n  }\n}\n\n/**\n * Strict ISO 8601 date parser\n * @example\n parse('1970-01-01T00:00:00.000Z');         // new Date(0)\n parse('1950-02');                          // new Date(1950, 1)\n parse('1960W011');                         // new Date(1960, 0, 4)\n parse('1950-205');                         // new Date(1950, 6, 24)\n parse('1997-W01-2')                        // new Date(1996, 11, 31)\n parse('+002015-W02-4');                    // new Date(2015, 0, 8);\n parse('2052-05-09T15:20.5');               // new Date(2052, 4, 9, 15, 20, 30, 0);\n\n * @module antongolub/iso8601\n * @public\n * @param {String} input\n * @param {String} [group] parser pattern\n * @param {Date} [date] Default date\n * @return {Date/undefined}\n */\nexport default function parse (input: IISOString, group?: string, date?: Date): Date | void {\n  const parsers = getParsers(group)\n  const value = normalizeInput(input)\n  const initialDate = normalizeDate(date)\n\n  for (let i = parsers.length; i--;) {\n    const {pattern, builder} = parsers[i]\n\n    for (let j = pattern.length; j--;) {\n      const parts = pattern[j].exec(value)\n\n      if (parts) {\n        return builder(parts, initialDate)\n      }\n    }\n  }\n}\n",
+    "content": "/**\n * Strict ISO8601 datetime parser\n * @module antongolub/iso8601\n */\n\n// @flow\nimport type {\n  IParser,\n  IISOString\n} from '../interface'\n\nimport YY from './yy'\nimport YYYYMMDD from './yyyymmdd'\nimport YYYYDDD from './yyyyddd'\nimport YYYYWWWD from './yyyywwwd'\nimport HHMMSSTZ from './hhmmsstz'\nimport DATETIME from './datetime'\n\nconst dateParsers = [YY, YYYYMMDD, YYYYDDD, YYYYWWWD]\nconst timeParsers = [HHMMSSTZ]\nconst dateTimeParsers = [DATETIME]\nconst allParsers = [...timeParsers, ...dateTimeParsers, ...dateParsers]\n\n/**\n * Normalizes input string.\n * @ignore\n * @param {Mixed} value\n * @return {string}\n */\nconst normalizeInput = (value: IISOString) => ('' + value).replace(',', '.')\n\n/**\n * Checks whether given date is valid.\n * @ignore\n * @param {Mixed} date\n * @return {Boolean}\n */\nconst isValidDate = (date: Date | number | string): boolean => {\n  const instant = date instanceof Date\n    ? date.getTime()\n    : typeof date === 'string'\n      ? Date.parse(date)\n      : date\n\n  return !isNaN(instant)\n}\n\n/**\n * @ignore\n * @param {Date/string/number} date\n * @return {Date}\n */\nconst normalizeDate = (date?: Date | number | string): Date => date !== undefined && isValidDate(date)\n  ? new Date(date)\n  : new Date()\n\n/**\n * @ignore\n * @param {string} group\n * @return {IParser[]}\n */\nconst getParsers = (group?: string): Array<IParser> => {\n  switch (group && ('' + group).toLowerCase()) {\n    case 'localtime':\n    case 'time':\n      return timeParsers\n\n    case 'date':\n      return dateParsers\n\n    case 'datetime':\n      return dateTimeParsers\n\n    default:\n      return allParsers\n  }\n}\n\n/**\n * Strict ISO 8601 date parser\n * @example\n parse('1970-01-01T00:00:00.000Z');         // new Date(0)\n parse('1950-02');                          // new Date(1950, 1)\n parse('1960W011');                         // new Date(1960, 0, 4)\n parse('1950-205');                         // new Date(1950, 6, 24)\n parse('1997-W01-2')                        // new Date(1996, 11, 31)\n parse('+002015-W02-4');                    // new Date(2015, 0, 8);\n parse('2052-05-09T15:20.5');               // new Date(2052, 4, 9, 15, 20, 30, 0);\n\n * @module antongolub/iso8601\n * @public\n * @param {String} input\n * @param {String} [group] 'date', 'time', 'datetime' are permissible; applies all if empty\n * @param {Date/string/number} [date] Ref date for 4.2.2 Local time representations. Defaults to new Date().\n * @return {Date/undefined}\n */\nexport default function parse (input: IISOString, group?: string, date?: Date | number | string): Date | void {\n  const parsers = getParsers(group)\n  const value = normalizeInput(input)\n  const initialDate = normalizeDate(date)\n\n  for (let i = parsers.length; i--;) {\n    const {pattern, builder} = parsers[i]\n\n    for (let j = pattern.length; j--;) {\n      const parts = pattern[j].exec(value)\n\n      if (parts) {\n        return builder(parts, initialDate)\n      }\n    }\n  }\n}\n",
     "static": true,
     "longname": "/home/travis/build/antongolub/iso8601/src/main/js/parser/index.js",
     "access": "public",
@@ -792,7 +792,7 @@
     "export": false,
     "importPath": "@antongolub/iso8601",
     "importStyle": null,
-    "description": "Checks whether given date instance is valid.",
+    "description": "Checks whether given date is valid.",
     "lineNumber": 33,
     "ignore": true,
     "params": [
@@ -830,13 +830,13 @@
     "importPath": "@antongolub/iso8601",
     "importStyle": null,
     "description": "",
-    "lineNumber": 40,
+    "lineNumber": 44,
     "ignore": true,
     "params": [
       {
         "nullable": null,
         "types": [
-          "Date/undefined"
+          "Date/string/number"
         ],
         "spread": false,
         "optional": false,
@@ -867,7 +867,7 @@
     "importPath": "@antongolub/iso8601",
     "importStyle": null,
     "description": "",
-    "lineNumber": 47,
+    "lineNumber": 51,
     "ignore": true,
     "params": [
       {
@@ -907,7 +907,7 @@
     "examples": [
       "parse('1970-01-01T00:00:00.000Z');         // new Date(0)\nparse('1950-02');                          // new Date(1950, 1)\nparse('1960W011');                         // new Date(1960, 0, 4)\nparse('1950-205');                         // new Date(1950, 6, 24)\nparse('1997-W01-2')                        // new Date(1996, 11, 31)\nparse('+002015-W02-4');                    // new Date(2015, 0, 8);\nparse('2052-05-09T15:20.5');               // new Date(2052, 4, 9, 15, 20, 30, 0);"
     ],
-    "lineNumber": 82,
+    "lineNumber": 86,
     "unknown": [
       {
         "tagName": "@module",
@@ -933,17 +933,17 @@
         "spread": false,
         "optional": true,
         "name": "group",
-        "description": "parser pattern"
+        "description": "'date', 'time', 'datetime' are permissible; applies all if empty"
       },
       {
         "nullable": null,
         "types": [
-          "Date"
+          "Date/string/number"
         ],
         "spread": false,
         "optional": true,
         "name": "date",
-        "description": "Default date"
+        "description": "Ref date for 4.2.2 Local time representations. Defaults to new Date()."
       }
     ],
     "return": {
@@ -1162,7 +1162,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"@antongolub/iso8601\",\n  \"version\": \"0.2.0\",\n  \"description\": \"Strict ISO8601 datetime parser\",\n  \"main\": \"target/es5/index.js\",\n  \"types\": \"typings/index.d.ts\",\n  \"typescript\": {\n    \"definition\": \"typings/index.d.ts\"\n  },\n  \"scripts\": {\n    \"jest\": \"jest -w 1\",\n    \"lint\": \"standard-flow src/**/*.js\",\n    \"flow\": \"flow\",\n    \"test\": \"npm run lint && npm run flow && npm run jest\",\n    \"flow:coverage\": \"flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90\",\n    \"build\": \"npm run build:es5 && npm run docs\",\n    \"build:es5\": \"BABEL_ENV=production babel src/main/js --out-dir target/es5\",\n    \"test:report\": \"npm test && npm run coveralls:push\",\n    \"coveralls:push\": \"cat ./coverage/lcov.info | coveralls\",\n    \"docs\": \"esdoc\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/antongolub/iso8601.git\"\n  },\n  \"files\": [\n    \"README.md\",\n    \"CHANGELOG.md\",\n    \"target\",\n    \"typings\",\n    \"flow-typed\"\n  ],\n  \"keywords\": [\n    \"iso8601\",\n    \"ISO 8601\",\n    \"datetime\",\n    \"date\",\n    \"time\",\n    \"parser\"\n  ],\n  \"author\": \"Anton Golub <a.golub@qiwi.com>\",\n  \"license\": \"MIT\",\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@babel/cli\": \"^7.5.5\",\n    \"@babel/core\": \"^7.5.5\",\n    \"@babel/plugin-proposal-object-rest-spread\": \"^7.5.5\",\n    \"@babel/plugin-transform-flow-strip-types\": \"^7.4.4\",\n    \"@babel/plugin-transform-runtime\": \"^7.5.5\",\n    \"@babel/polyfill\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.5.5\",\n    \"@babel/preset-flow\": \"^7.0.0\",\n    \"@qiwi/semantic-release-gh-pages-plugin\": \"^1.10.5\",\n    \"@semantic-release/changelog\": \"^3.0.4\",\n    \"@semantic-release/git\": \"^7.0.16\",\n    \"@semantic-release/github\": \"^5.4.3\",\n    \"@semantic-release/npm\": \"^5.1.15\",\n    \"babel-core\": \"^7.0.0-bridge.0\",\n    \"babel-preset-minify\": \"^0.5.1\",\n    \"coveralls\": \"^3.0.6\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-coverage-plugin\": \"^1.1.0\",\n    \"esdoc-flow-plugin\": \"^1.0.0\",\n    \"esdoc-importpath-plugin\": \"^1.0.2\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"flow-bin\": \"^0.106.0\",\n    \"flow-coverage-report\": \"^0.6.1\",\n    \"flow-remove-types\": \"^2.106.0\",\n    \"jest\": \"^24.9.0\",\n    \"lodash\": \"^4.17.15\",\n    \"semantic-release\": \"^15.13.24\",\n    \"standard-flow\": \"^1.0.0\"\n  },\n  \"jest\": {\n    \"testEnvironment\": \"node\",\n    \"collectCoverage\": true,\n    \"collectCoverageFrom\": [\n      \"<rootDir>/src/main/**/*.js\"\n    ],\n    \"testMatch\": [\n      \"<rootDir>/src/test/**/*.js\"\n    ],\n    \"coveragePathIgnorePatterns\": [\n      \"/node_modules/\",\n      \"<rootDir>/src/main/js/interface.js\"\n    ]\n  },\n  \"standard-flow\": {\n    \"parser\": \"babel-eslint\",\n    \"globals\": [\n      \"it\",\n      \"expect\",\n      \"describe\"\n    ],\n    \"ignore\": [],\n    \"plugins\": [\n      \"flowtype\"\n    ],\n    \"settings\": {\n      \"flowtype\": {\n        \"onlyFilesWithFlowAnnotation\": true\n      }\n    }\n  },\n  \"release\": {\n    \"branch\": \"master\",\n    \"plugins\": [\n      \"@semantic-release/release-notes-generator\",\n      \"@semantic-release/changelog\",\n      \"@semantic-release/git\",\n      \"@semantic-release/github\",\n      \"@semantic-release/npm\",\n      \"@qiwi/semantic-release-gh-pages-plugin\"\n    ]\n  }\n}\n",
+    "content": "{\n  \"name\": \"@antongolub/iso8601\",\n  \"version\": \"0.2.0\",\n  \"description\": \"Strict ISO8601 datetime parser\",\n  \"main\": \"target/es5/index.js\",\n  \"types\": \"typings/index.d.ts\",\n  \"typescript\": {\n    \"definition\": \"typings/index.d.ts\"\n  },\n  \"scripts\": {\n    \"jest\": \"jest -w 1\",\n    \"lint\": \"standard-flow src/**/*.js\",\n    \"flow\": \"flow\",\n    \"flow:fetch\": \"flow-typed install jest@24\",\n    \"flow:coverage\": \"flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90\",\n    \"test\": \"npm run lint && npm run flow && npm run flow:coverage && npm run jest\",\n    \"build\": \"npm run build:es5 && npm run docs\",\n    \"build:es5\": \"BABEL_ENV=production babel src/main/js --out-dir target/es5\",\n    \"test:report\": \"npm test && npm run coveralls:push\",\n    \"coveralls:push\": \"cat ./coverage/lcov.info | coveralls\",\n    \"docs\": \"esdoc\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/antongolub/iso8601.git\"\n  },\n  \"files\": [\n    \"README.md\",\n    \"CHANGELOG.md\",\n    \"target\",\n    \"typings\",\n    \"flow-typed\"\n  ],\n  \"keywords\": [\n    \"iso8601\",\n    \"ISO 8601\",\n    \"datetime\",\n    \"date\",\n    \"time\",\n    \"parser\"\n  ],\n  \"author\": \"Anton Golub <a.golub@qiwi.com>\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"flow-typed\": \"^2.6.1\",\n    \"install\": \"^0.13.0\"\n  },\n  \"devDependencies\": {\n    \"@babel/cli\": \"^7.5.5\",\n    \"@babel/core\": \"^7.5.5\",\n    \"@babel/plugin-proposal-object-rest-spread\": \"^7.5.5\",\n    \"@babel/plugin-transform-flow-strip-types\": \"^7.4.4\",\n    \"@babel/plugin-transform-runtime\": \"^7.5.5\",\n    \"@babel/polyfill\": \"^7.4.4\",\n    \"@babel/preset-env\": \"^7.5.5\",\n    \"@babel/preset-flow\": \"^7.0.0\",\n    \"@qiwi/semantic-release-gh-pages-plugin\": \"^1.10.5\",\n    \"@semantic-release/changelog\": \"^3.0.4\",\n    \"@semantic-release/git\": \"^7.0.16\",\n    \"@semantic-release/github\": \"^5.4.3\",\n    \"@semantic-release/npm\": \"^5.1.15\",\n    \"babel-core\": \"^7.0.0-bridge.0\",\n    \"babel-preset-minify\": \"^0.5.1\",\n    \"coveralls\": \"^3.0.6\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-coverage-plugin\": \"^1.1.0\",\n    \"esdoc-flow-plugin\": \"^1.0.0\",\n    \"esdoc-importpath-plugin\": \"^1.0.2\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"flow-bin\": \"^0.106.2\",\n    \"flow-coverage-report\": \"^0.6.1\",\n    \"flow-remove-types\": \"^2.106.2\",\n    \"jest\": \"^24.9.0\",\n    \"lodash\": \"^4.17.15\",\n    \"semantic-release\": \"^15.13.24\",\n    \"standard-flow\": \"^1.0.0\"\n  },\n  \"jest\": {\n    \"testEnvironment\": \"node\",\n    \"collectCoverage\": true,\n    \"collectCoverageFrom\": [\n      \"<rootDir>/src/main/**/*.js\"\n    ],\n    \"testMatch\": [\n      \"<rootDir>/src/test/**/*.js\"\n    ],\n    \"coveragePathIgnorePatterns\": [\n      \"/node_modules/\",\n      \"<rootDir>/src/main/js/interface.js\"\n    ]\n  },\n  \"standard-flow\": {\n    \"parser\": \"babel-eslint\",\n    \"globals\": [\n      \"it\",\n      \"expect\",\n      \"describe\",\n      \"fit\",\n      \"xit\"\n    ],\n    \"ignore\": [],\n    \"plugins\": [\n      \"flowtype\"\n    ],\n    \"settings\": {\n      \"flowtype\": {\n        \"onlyFilesWithFlowAnnotation\": true\n      }\n    }\n  },\n  \"release\": {\n    \"branch\": \"master\",\n    \"plugins\": [\n      \"@semantic-release/release-notes-generator\",\n      \"@semantic-release/changelog\",\n      \"@semantic-release/git\",\n      \"@semantic-release/github\",\n      \"@semantic-release/npm\",\n      \"@qiwi/semantic-release-gh-pages-plugin\"\n    ]\n  }\n}\n",
     "longname": "/home/travis/build/antongolub/iso8601/package.json",
     "name": "package.json",
     "static": true,
