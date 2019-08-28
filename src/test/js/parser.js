@@ -118,6 +118,28 @@ describe('parser', () => {
     expect(parse('02.5')).toEqual(date)
   })
 
+  it('parses localTime with ref date', () => {
+    const date = new Date(2000, 0, 1, 15, 20, 58, 956)
+
+    expect(parse(
+      '15:20:58.956',
+      'time',
+      new Date(2000, 0, 1)
+    )).toEqual(date)
+
+    expect(parse(
+      '15:20:58.956',
+      'time',
+      'Sat Jan 01 2000 00:00:00 GMT+0300 (Moscow Standard Time)'
+    )).toEqual(date)
+
+    expect(parse(
+      '15:20:58.956',
+      'time',
+      946674000000
+    )).toEqual(date)
+  })
+
   it('parses localTime with TZ offset', () => {
     const date1 = new Date()
     const offset1 = (-10 * 60 + date1.getTimezoneOffset()) * 60000

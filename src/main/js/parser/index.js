@@ -30,19 +30,27 @@ const allParsers = [...timeParsers, ...dateTimeParsers, ...dateParsers]
 const normalizeInput = (value: IISOString) => ('' + value).replace(',', '.')
 
 /**
- * Checks whether given date instance is valid.
+ * Checks whether given date is valid.
  * @ignore
  * @param {Mixed} date
  * @return {Boolean}
  */
-const isValidDate = (date) => date instanceof Date && !isNaN(date.getTime())
+const isValidDate = (date: Date | number | string): boolean => {
+  const instant = date instanceof Date
+    ? date.getTime()
+    : typeof date === 'string'
+      ? Date.parse(date)
+      : date
+
+  return !isNaN(instant)
+}
 
 /**
  * @ignore
- * @param {Date/undefined} date
+ * @param {Date/string/number} date
  * @return {Date}
  */
-const normalizeDate = (date): Date => date && isValidDate(date)
+const normalizeDate = (date?: Date | number | string): Date => date !== undefined && isValidDate(date)
   ? new Date(date)
   : new Date()
 
@@ -83,10 +91,10 @@ const getParsers = (group?: string): Array<IParser> => {
  * @public
  * @param {String} input
  * @param {String} [group] 'date', 'time', 'datetime' are permissible; applies all if empty
- * @param {Date} [date] Ref date for 4.2.2 Local time representations. Defaults to new Date().
+ * @param {Date/string/number} [date] Ref date for 4.2.2 Local time representations. Defaults to new Date().
  * @return {Date/undefined}
  */
-export default function parse (input: IISOString, group?: string, date?: Date): Date | void {
+export default function parse (input: IISOString, group?: string, date?: Date | number | string): Date | void {
   const parsers = getParsers(group)
   const value = normalizeInput(input)
   const initialDate = normalizeDate(date)

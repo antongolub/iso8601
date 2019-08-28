@@ -2,10 +2,10 @@
 export type IISOString = string
 
 export type IISODate = {
-  constructor(magic: IMagicParam): IISODate
+  constructor(input: IInput): IISODate
 }
 
-export type IMagicParam = string
+export type IInput = string
 
 export type IPart = string
 export type IParts = Array<IPart>
