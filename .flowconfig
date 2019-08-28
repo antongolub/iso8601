@@ -1,6 +1,6 @@
 [include]
-./src/
+./src
 
 [ignore]
-./dist/
+./target/
 .*/node_modules/.*

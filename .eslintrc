@@ -1,3 +1,6 @@
 {
-  "extends": ["standard-flow"]
+  "extends": ["standard-flow"],
+  "env": {
+    "jest": true
+  }
 }

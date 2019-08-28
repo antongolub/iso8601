@@ -11,8 +11,9 @@
     "jest": "jest -w 1",
     "lint": "standard-flow src/**/*.js",
     "flow": "flow",
-    "test": "npm run lint && npm run flow && npm run jest",
+    "flow:fetch": "flow-typed install jest@24",
     "flow:coverage": "flow-coverage-report -i 'src/main/**/*.js' -t html -t json -t text --threshold 90",
+    "test": "npm run lint && npm run flow && npm run flow:coverage && npm run jest",
     "build": "npm run build:es5 && npm run docs",
     "build:es5": "BABEL_ENV=production babel src/main/js --out-dir target/es5",
     "test:report": "npm test && npm run coveralls:push",
@@ -40,7 +41,10 @@
   ],
   "author": "Anton Golub <a.golub@qiwi.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "flow-typed": "^2.6.1",
+    "install": "^0.13.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -90,7 +94,9 @@
     "globals": [
       "it",
       "expect",
-      "describe"
+      "describe",
+      "fit",
+      "xit"
     ],
     "ignore": [],
     "plugins": [

@@ -1,3 +1,5 @@
+// @flow
+
 import parse from '../../main/js'
 
 function getLocalOffset () {
@@ -119,25 +121,27 @@ describe('parser', () => {
   })
 
   it('parses localTime with ref date', () => {
-    const date = new Date(2000, 0, 1, 15, 20, 58, 956)
+    const instant = Date.UTC(2000, 0, 1, 15, 20, 58, 956)
+    const offset: number = 60000 * (new Date()).getTimezoneOffset()
+    const expected = instant + offset
 
-    expect(parse(
+    expect(+parse(
       '15:20:58.956',
       'time',
-      new Date(2000, 0, 1)
-    )).toEqual(date)
+      new Date((Date.UTC(2000, 0, 1)))
+    )).toBe(expected)
 
-    expect(parse(
+    expect(+parse(
       '15:20:58.956',
       'time',
-      'Sat Jan 01 2000 00:00:00 GMT+0300 (Moscow Standard Time)'
-    )).toEqual(date)
+      'Sat Jan 01 2000 03:00:00 GMT+0300 (Moscow Standard Time)'
+    )).toBe(expected)
 
-    expect(parse(
+    expect(+parse(
       '15:20:58.956',
       'time',
-      946674000000
-    )).toEqual(date)
+      Date.UTC(2000, 0, 1)
+    )).toBe(expected)
   })
 
   it('parses localTime with TZ offset', () => {
@@ -147,7 +151,7 @@ describe('parser', () => {
     date1.setMinutes(30)
     date1.setSeconds(0)
     date1.setMilliseconds(0)
-    expect(parse('02.5-1000').getTime()).toEqual(date1.getTime() - offset1)
+    expect(+parse('02.5-1000')).toBe(date1.getTime() - offset1)
 
     const date2 = new Date()
     const offset2 = (21 * 60 + date1.getTimezoneOffset()) * 60000
@@ -155,21 +159,21 @@ describe('parser', () => {
     date2.setMinutes(1)
     date2.setSeconds(5)
     date2.setMilliseconds(673)
-    expect(parse('14:01:05.673+21:00').getTime()).toEqual(date2.getTime() - offset2)
+    expect(+parse('14:01:05.673+21:00')).toBe(date2.getTime() - offset2)
 
     const date3 = new Date()
     date3.setUTCHours(14)
     date3.setUTCMinutes(1)
     date3.setUTCSeconds(5)
     date3.setUTCMilliseconds(673)
-    expect(parse('14:01:05.673Z').getTime()).toEqual(date3.getTime())
+    expect(+parse('14:01:05.673Z')).toBe(date3.getTime())
 
     const date5 = new Date()
     date5.setUTCHours(14)
     date5.setUTCMinutes(5)
     date5.setUTCSeconds(30)
     date5.setUTCMilliseconds(0)
-    expect(parse('1405,5Z').getTime()).toEqual(date5.getTime())
+    expect(+parse('1405,5Z')).toBe(date5.getTime())
 
     expect(parse('00Z', 'time', new Date(0))).toEqual(new Date(0))
   })
@@ -193,13 +197,13 @@ describe('parser', () => {
     const date3 = new Date(2015, 5, 1, 23, 59, 60)
     expect(parse('2015-06-01T23:59:60')).toEqual(date3)
 
-    expect(parse('1970-01-01T' + offset.substr(1) + ':00' + offset).getTime()).toBe(0)
-    expect(parse('1970-01-01T12:00:00+12:00').getTime()).toBe(0)
-    expect(parse('1969-12-31T12:00:00-12:00').getTime()).toBe(0)
-    expect(parse('2001-02-03T04:05:06+07:08').getTime()).toBe(981147426000)
-    expect(parse('2001-02-03T04:05:06-07:08').getTime()).toBe(981198786000)
-    expect(parse('9999-12-31T12:59:59+12:59').getTime()).toBe(253402214459000)
-    expect(parse('1970-01-01T00:00:00Z').getTime()).toBe(0)
+    expect(+parse('1970-01-01T' + offset.substr(1) + ':00' + offset)).toBe(0)
+    expect(+parse('1970-01-01T12:00:00+12:00')).toBe(0)
+    expect(+parse('1969-12-31T12:00:00-12:00')).toBe(0)
+    expect(+parse('2001-02-03T04:05:06+07:08')).toBe(981147426000)
+    expect(+parse('2001-02-03T04:05:06-07:08')).toBe(981198786000)
+    expect(+parse('9999-12-31T12:59:59+12:59')).toBe(253402214459000)
+    expect(+parse('1970-01-01T00:00:00Z')).toBe(0)
   })
 
   it('parses with group preset', () => {
@@ -220,7 +224,7 @@ describe('parser', () => {
     ].forEach(([value, group, expected]) => {
       const result = parse(value, group)
       if (typeof expected === 'number') {
-        expect(result.getTime()).toBe(expected)
+        expect(+result).toBe(expected)
       } else {
         expect(result).toBeUndefined()
       }
