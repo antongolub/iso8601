@@ -41,4 +41,16 @@ yarn add @antongolub/iso8601
     const date4 = parser('1969-12-31T12:00:00-12:00')  // Full dataTime → new Date(0)
 ```
 
-
+#### API
+```javascript
+parser (value: string, group?: string, date?: Date | number | string): Date | void
+```
+* `value` — ISO string
+* `group` — optional pattern group name to specify parsing case. 
+For example, `1900` matches to `hhmm` (4.2.2.3 p. a) and `YYYY` (4.1.2.3 p. b) and requires clarification.
+Supported values: `date`, `time` / `localtime`, `datetime`.
+* `date` — optional date reference to resolve local time values. Defaults to `Date.now()`
+```javascript
+    const date5 = parser('12:00') // 2019-09-03T09:00:00.000Z based on Date.now() for Moscow TZ (+03:00)
+    const date6 = parser('12:00', 'localtime', new Date(Date.UTC(2010, 0, 1))) // 2000-01-01T09:00:00.000Z
+```
