@@ -18,7 +18,8 @@
     "build:es5": "BABEL_ENV=production babel src/main/js --out-dir target/es5",
     "test:report": "npm test && npm run coveralls:push",
     "coveralls:push": "cat ./coverage/lcov.info | coveralls",
-    "docs": "esdoc"
+    "docs": "esdoc",
+    "postupdate": "npm i && npm audit fix && npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -54,7 +55,7 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-flow": "^7.0.0",
-    "@qiwi/semantic-release-gh-pages-plugin": "^1.10.5",
+    "@qiwi/semantic-release-gh-pages-plugin": "^1.10.6",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/git": "^7.0.16",
     "@semantic-release/github": "^5.4.3",
@@ -67,9 +68,9 @@
     "esdoc-flow-plugin": "^1.0.0",
     "esdoc-importpath-plugin": "^1.0.2",
     "esdoc-standard-plugin": "^1.0.0",
-    "flow-bin": "^0.106.2",
+    "flow-bin": "^0.106.3",
     "flow-coverage-report": "^0.6.1",
-    "flow-remove-types": "^2.106.2",
+    "flow-remove-types": "^2.106.3",
     "jest": "^24.9.0",
     "lodash": "^4.17.15",
     "semantic-release": "^15.13.24",
