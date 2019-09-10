@@ -220,7 +220,11 @@ describe('parser', () => {
       ['02.5-1000', 'datetime'],
       ['2004W015T101536', 'date'],
       ['19500205', 'time'],
-      ['1970-01-01T00:00:00Z', 'localtime']
+      ['1970-01-01T00:00:00Z', 'localtime'],
+      ['1970-01-01T00:00:00Z', ['localtime', 'datetime'], 0],
+      ['1970-01-01T00:00:00Z', undefined, 0], // fallback to 'all'
+      ['1970-01-01T00:00:00Z', []],           // but empty array means no parsers
+      ['1970-01-01T00:00:00Z', 'foo']
     ].forEach(([value, group, expected]) => {
       const result = parse(value, group)
       if (typeof expected === 'number') {

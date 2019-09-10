@@ -43,12 +43,12 @@ yarn add @antongolub/iso8601
 
 #### API
 ```javascript
-parser (value: string, group?: string, date?: Date | number | string): Date | void
+parser (value: string, group?: string | string[], date?: Date | number | string): Date | void
 ```
 * `value` — ISO string
 * `group` — optional pattern group name to specify parsing case. 
 For example, `1900` matches to `hhmm` (4.2.2.3 p. a) and `YYYY` (4.1.2.3 p. b) and requires clarification.
-Supported values: `date`, `time` / `localtime`, `datetime`.
+Supported values: `date`, `time` / `localtime`, `datetime` and `all`
 * `date` — optional date reference to resolve local time values. Defaults to `Date.now()`
 ```javascript
     const date5 = parser('12:00') // 2019-09-03T09:00:00.000Z based on Date.now() for Moscow TZ (+03:00)
