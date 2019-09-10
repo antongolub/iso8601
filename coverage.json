@@ -1,7 +1,7 @@
 {
-  "coverage": "76.47%",
-  "expectCount": 17,
-  "actualCount": 13,
+  "coverage": "77.77%",
+  "expectCount": 18,
+  "actualCount": 14,
   "files": {
     "js/parser/datetime.js": {
       "expectCount": 1,
@@ -14,8 +14,8 @@
       "undocumentLines": []
     },
     "js/parser/index.js": {
-      "expectCount": 9,
-      "actualCount": 5,
+      "expectCount": 10,
+      "actualCount": 6,
       "undocumentLines": [
         14,
         15,

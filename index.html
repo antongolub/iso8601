@@ -69,6 +69,18 @@ yarn add @antongolub/iso8601</code>
     const date3 = parser(&apos;19&apos;)            // YY (century) &#x2192; new Date(1900, 0)
     const date4 = parser(&apos;1969-12-31T12:00:00-12:00&apos;)  // Full dataTime &#x2192; new Date(0)</code>
 </code></pre>
+<h4 id="api">API</h4><pre><code class="lang-javascript"><code class="source-code prettyprint">parser (value: string, group?: string | string[], date?: Date | number | string): Date | void</code>
+</code></pre>
+<ul>
+<li><code>value</code> &#x2014; ISO string</li>
+<li><code>group</code> &#x2014; optional pattern group name to specify parsing case. 
+For example, <code>1900</code> matches to <code>hhmm</code> (4.2.2.3 p. a) and <code>YYYY</code> (4.1.2.3 p. b) and requires clarification.
+Supported values: <code>date</code>, <code>time</code> / <code>localtime</code>, <code>datetime</code> and <code>all</code></li>
+<li><code>date</code> &#x2014; optional date reference to resolve local time values. Defaults to <code>Date.now()</code><pre><code class="lang-javascript"><code class="source-code prettyprint">  const date5 = parser(&apos;12:00&apos;) // 2019-09-03T09:00:00.000Z based on Date.now() for Moscow TZ (+03:00)
+  const date6 = parser(&apos;12:00&apos;, &apos;localtime&apos;, new Date(Date.UTC(2010, 0, 1))) // 2000-01-01T09:00:00.000Z</code>
+</code></pre>
+</li>
+</ul>
 </div>
 </div>
 

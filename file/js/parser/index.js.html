@@ -93,10 +93,10 @@ const normalizeDate = (date?: Date | number | string): Date =&gt; date !== undef
 
 /**
  * @ignore
- * @param {string} group
+ * @param {string} [group]
  * @return {IParser[]}
  */
-const getParsers = (group?: string): Array&lt;IParser&gt; =&gt; {
+const getParserByName = (group: string = &apos;all&apos;): Array&lt;IParser&gt; =&gt; {
   switch (group &amp;&amp; (&apos;&apos; + group).toLowerCase()) {
     case &apos;localtime&apos;:
     case &apos;time&apos;:
@@ -108,10 +108,21 @@ const getParsers = (group?: string): Array&lt;IParser&gt; =&gt; {
     case &apos;datetime&apos;:
       return dateTimeParsers
 
-    default:
+    case &apos;all&apos;:
       return allParsers
+
+    default:
+      console.warn(`ISO8601: unknown parser ${group}`)
+      return []
   }
 }
+
+/**
+ * @ignore
+ * @param {string/string[]} [group]
+ * @return {IParser[]}
+ */
+const getParsers = (group?: string | string[]): Array&lt;IParser&gt; =&gt; [].concat(...[].concat(group).map(getParserByName))
 
 /**
  * Strict ISO 8601 date parser
@@ -131,7 +142,7 @@ const getParsers = (group?: string): Array&lt;IParser&gt; =&gt; {
  * @param {Date/string/number} [date] Ref date for 4.2.2 Local time representations. Defaults to new Date().
  * @return {Date/undefined}
  */
-export default function parse (input: IISOString, group?: string, date?: Date | number | string): Date | void {
+export default function parse (input: IISOString, group?: string | string[], date?: Date | number | string): Date | void {
   const parsers = getParsers(group)
   const value = normalizeInput(input)
   const initialDate = normalizeDate(date)
