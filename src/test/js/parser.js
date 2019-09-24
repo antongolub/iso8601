@@ -1,6 +1,7 @@
 // @flow
 
 import parse from '../../main/js'
+// import parseDateFns from 'date-fns/parseISO'
 
 function getLocalOffset () {
   const date = new Date()
@@ -218,6 +219,7 @@ describe('parser', () => {
       ['19500205', 'date', new Date(1950, 1, 5).getTime()],
       ['15:20:58.956', 'time', date.getTime()],
       ['02.5-1000', 'datetime'],
+      ['02.5-1000', 'time', +parse('T12:30:00.000Z')],
       ['2004W015T101536', 'date'],
       ['19500205', 'time'],
       ['1970-01-01T00:00:00Z', 'localtime'],
@@ -227,6 +229,7 @@ describe('parser', () => {
       ['1970-01-01T00:00:00Z', 'foo']
     ].forEach(([value, group, expected]) => {
       const result = parse(value, group)
+      // console.log(parseDateFns(value), value, group)
       if (typeof expected === 'number') {
         expect(+result).toBe(expected)
       } else {
