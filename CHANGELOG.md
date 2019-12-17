@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/antongolub/iso8601/compare/v1.2.0...v1.2.1) (2019-12-17)
+
+
+### Performance Improvements
+
+* **package:** deps revision & repack ([f65ad62](https://github.com/antongolub/iso8601/commit/f65ad62f969d74deb64a2522e62dbcc4de5bb642))
+
 # [1.2.0](https://github.com/antongolub/iso8601/compare/v1.1.0...v1.2.0) (2019-09-10)
 
 
