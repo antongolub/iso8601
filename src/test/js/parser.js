@@ -146,6 +146,7 @@ describe('parser', () => {
   })
 
   it('parses localTime with TZ offset', () => {
+    const n = new Date()
     const date1 = new Date()
     const offset1 = (-10 * 60 + date1.getTimezoneOffset()) * 60000
     date1.setHours(2)
@@ -162,19 +163,36 @@ describe('parser', () => {
     date2.setMilliseconds(673)
     expect(+parse('14:01:05.673+21:00')).toBe(date2.getTime() - offset2)
 
-    const date3 = new Date()
-    date3.setUTCHours(14)
-    date3.setUTCMinutes(1)
-    date3.setUTCSeconds(5)
-    date3.setUTCMilliseconds(673)
-    expect(+parse('14:01:05.673Z')).toBe(date3.getTime())
+    const utc1 = Date.UTC(
+      n.getFullYear(),
+      n.getMonth(),
+      n.getDate(),
+      14,
+      1,
+      5,
+      673
+    )
+    const date3 = new Date(
+      n.getFullYear(),
+      n.getMonth(),
+      n.getDate(),
+      14,
+      1,
+      5,
+      673)
+    expect(+parse('14:01:05.673Z')).toBe(utc1)
+    expect(+parse('14:01:05.673Z')).toBe(date3.getTime() - date1.getTimezoneOffset() * 60000)
 
-    const date5 = new Date()
-    date5.setUTCHours(14)
-    date5.setUTCMinutes(5)
-    date5.setUTCSeconds(30)
-    date5.setUTCMilliseconds(0)
-    expect(+parse('1405,5Z')).toBe(date5.getTime())
+    const utc2 = Date.UTC(
+      n.getFullYear(),
+      n.getMonth(),
+      n.getDate(),
+      14,
+      5,
+      30,
+      0
+    )
+    expect(+parse('1405,5Z')).toBe(utc2)
 
     expect(parse('00Z', 'time', new Date(0))).toEqual(new Date(0))
   })
@@ -207,7 +225,7 @@ describe('parser', () => {
     expect(+parse('1970-01-01T00:00:00Z')).toBe(0)
   })
 
-  it('parses with group preset', () => {
+  describe('parses with group preset', () => {
     let date = new Date()
     date.setHours(15)
     date.setMinutes(20)
@@ -220,6 +238,7 @@ describe('parser', () => {
       ['15:20:58.956', 'time', date.getTime()],
       ['02.5-1000', 'datetime'],
       ['02.5-1000', 'time', +parse('T12:30:00.000Z')],
+      // ['02.5-1000', 'time', Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 12, 30)],
       ['2004W015T101536', 'date'],
       ['19500205', 'time'],
       ['1970-01-01T00:00:00Z', 'localtime'],
@@ -230,11 +249,13 @@ describe('parser', () => {
     ].forEach(([value, group, expected]) => {
       const result = parse(value, group)
       // console.log(parseDateFns(value), value, group)
-      if (typeof expected === 'number') {
-        expect(+result).toBe(expected)
-      } else {
-        expect(result).toBeUndefined()
-      }
+      it(`${value} ${String(group)}`, () => {
+        if (typeof expected === 'number') {
+          expect(+result).toBe(expected)
+        } else {
+          expect(result).toBeUndefined()
+        }
+      })
     })
   })
 

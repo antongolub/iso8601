@@ -24,10 +24,20 @@ const parser: IParser = {
     // Expressions of the difference between local time and UTC of day are a component in the representations
     // ...they shall not be used as self-standing expressions.
     if (parts[7]) { // Z for UTC
-      date.setUTCHours(hours | 0)
-      date.setUTCMinutes(minutes | 0)
-      date.setUTCSeconds(seconds | 0)
-      date.setUTCMilliseconds(milliseconds | 0)
+      return new Date(Date.UTC(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate(),
+        hours | 0,
+        minutes | 0,
+        seconds | 0,
+        milliseconds | 0
+      ))
+      //
+      // date.setUTCHours(hours | 0)
+      // date.setUTCMinutes(minutes | 0)
+      // date.setUTCSeconds(seconds | 0)
+      // date.setUTCMilliseconds(milliseconds | 0)
     } else {
       date.setHours(hours | 0)
       date.setMinutes(minutes | 0)
