@@ -238,7 +238,7 @@ describe('parser', () => {
       ['15:20:58.956', 'time', date.getTime()],
       ['02.5-1000', 'datetime'],
       ['02.5-1000', 'time', +parse('T12:30:00.000Z')],
-      // ['02.5-1000', 'time', Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 12, 30)],
+      ['02.5-1000', 'time', Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 12, 30)],
       ['2004W015T101536', 'date'],
       ['19500205', 'time'],
       ['1970-01-01T00:00:00Z', 'localtime'],
