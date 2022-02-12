@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/antongolub/iso8601/compare/v1.2.1...v1.2.2) (2022-02-12)
+
+
+### Bug Fixes
+
+* fix date leap when  parsing Thhmmss* for UTC (Zulu) timezome ([5ddb6f7](https://github.com/antongolub/iso8601/commit/5ddb6f7620f6a5df27dee5d61aaa3ad02e670573))
+
 ## [1.2.1](https://github.com/antongolub/iso8601/compare/v1.2.0...v1.2.1) (2019-12-17)
 
 
