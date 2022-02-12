@@ -61,21 +61,25 @@ const parser: IParser = {
     // Expressions of the difference between local time and UTC of day are a component in the representations
     // ...they shall not be used as self-standing expressions.
     if (parts[7]) { // Z for UTC
-      date.setUTCHours(hours | 0)
-      date.setUTCMinutes(minutes | 0)
-      date.setUTCSeconds(seconds | 0)
-      date.setUTCMilliseconds(milliseconds | 0)
+      date.setTime(Date.UTC(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDate(),
+        hours | 0,
+        minutes | 0,
+        seconds | 0,
+        milliseconds | 0
+      ))
     } else {
       date.setHours(hours | 0)
       date.setMinutes(minutes | 0)
       date.setSeconds(seconds | 0)
       date.setMilliseconds(milliseconds | 0)
+
+      // NOTE Time zones in ISO 8601 are represented as local time (with the location unspecified), as UTC, or as an offset from UTC.
+      const offset = getSignFactor(parts[8]) * (+parts[9] * 60 + (+parts[10] || 0))
+      correctOffset(date, offset)
     }
-
-    // NOTE Time zones in ISO 8601 are represented as local time (with the location unspecified), as UTC, or as an offset from UTC.
-    const offset = getSignFactor(parts[8]) * (+parts[9] * 60 + (+parts[10] || 0))
-
-    correctOffset(date, offset)
 
     return date
   }
